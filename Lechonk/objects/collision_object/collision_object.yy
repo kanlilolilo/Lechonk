@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"shylily_idle_object",
+  "%Name":"collision_object",
   "eventList":[],
   "managed":true,
-  "name":"shylily_idle_object",
+  "name":"collision_object",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"shylily_idle_sprite",
-    "path":"sprites/shylily_idle_sprite/shylily_idle_sprite.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
