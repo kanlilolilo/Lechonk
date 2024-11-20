@@ -34,7 +34,9 @@
   },
   "name":"Lechonk",
   "resources":[
+    {"id":{"name":"shylily_idle_object","path":"objects/shylily_idle_object/shylily_idle_object.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"shylily_idle_sprite","path":"sprites/shylily_idle_sprite/shylily_idle_sprite.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
