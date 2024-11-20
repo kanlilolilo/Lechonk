@@ -1,6 +1,6 @@
-var _key_left = keyboard_check(vk_left);
-var _key_right = keyboard_check(vk_right);
-var _key_jump = keyboard_check(vk_up);
+var _key_left = keyboard_check(ord("A"));
+var _key_right = keyboard_check(ord("D"));
+var _key_jump = keyboard_check(ord("W"));
 
 var _move = _key_right - _key_left;
 
@@ -47,7 +47,7 @@ if (place_meeting(x, y+vsp, collision_object)) {
 y = y + vsp;
 
 // Fire bullets based on direction
-if (keyboard_check(vk_space)) { // Fire when Space is held down
+if (keyboard_check(ord("Q"))) { // Fire when Space is held down
     if (fire_timer <= 0) {
         // Create the bullet
         var bullet = instance_create_layer(x, y, "Instances", shylily_bullet_object);
