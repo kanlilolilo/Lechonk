@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"soviet_union_object",
+  "%Name":"vork_object",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"shylily_idle_object","path":"objects/shylily_idle_object/shylily_idle_object.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"soviet_union_object",
+  "name":"vork_object",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"soviet_union_sprite",
-    "path":"sprites/soviet_union_sprite/soviet_union_sprite.yy",
+    "name":"vork_sprite",
+    "path":"sprites/vork_sprite/vork_sprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,
