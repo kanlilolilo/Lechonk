@@ -12,7 +12,8 @@ is_knocked_back = false;  // Whether the object is in a knockback state
 knockback_cooldown = 0;  // Initialize cooldown
 knockback_multiplier = 1; // Starts at 1
 max_knockback_multiplier = 5; // Cap the multiplier to avoid excessive knockback
-// Initialize vibration control variables
-vibration_offset = 0;
-vibration_strength = 5; // The maximum displacement for the vibration (in pixels)
-vibration_speed = 5;    // How fast the bar vibrates (higher value = faster vibration)
+// Initialize heat variables
+minigun_heat = 0;  // Current heat level of the minigun
+max_heat = 100;    // Maximum heat before the minigun overheats
+heat_per_shot = 2; // Amount of heat the minigun generates per shot
+cool_down_rate = 0.5; // Rate at which the minigun cools down per step (when not firing)

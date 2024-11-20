@@ -13,17 +13,38 @@ var max_display_width = max_knockback_multiplier * bar_width;
 draw_set_color(c_black);
 draw_rectangle(bar_x, bar_y, bar_x + max_display_width, bar_y + bar_height, false);
 
-// Draw the current multiplier bar (color based on the multiplier)
-if (knockback_multiplier > 3) {
-    draw_set_color(c_red);
-} else if (knockback_multiplier > 1.2) {
-    draw_set_color(c_orange);
+// --------------------------------------------
+
+// Get the position of the character
+var player_x = x;  // Character's X position
+var player_y = y;  // Character's Y position
+
+// Initialize the width and height of the heat bar
+var heat_bar_width = 200; // Width of the bar
+var heat_bar_height = 20; // Height of the bar
+
+// Calculate the current width of the heat bar based on the minigun's heat
+var current_heat_width = (minigun_heat / max_heat) * heat_bar_width;
+
+// Heat bar position relative to the player (above the player's head)
+var heat_bar_x = player_x - (heat_bar_width / 2);  // Center the bar above the player
+var heat_bar_y = player_y - sprite_height - 10;    // Position the bar slightly above the player's head
+
+// Draw the background of the heat bar (gray)
+draw_set_color(c_black);
+draw_rectangle(heat_bar_x, heat_bar_y, heat_bar_x + heat_bar_width, heat_bar_y + heat_bar_height, false);
+
+// Draw the current heat bar (color based on heat)
+if (minigun_heat >= max_heat) {
+    draw_set_color(c_red);  // Red color when overheated
 } else {
-	draw_set_color(c_green);
+    draw_set_color(c_green);  // Green color when it's cool
 }
 
-draw_rectangle(bar_x, bar_y, bar_x + current_width, bar_y + bar_height, false);
+// Draw the actual heat bar
+draw_rectangle(heat_bar_x, heat_bar_y, heat_bar_x + current_heat_width, heat_bar_y + heat_bar_height, false);
 
-// Optionally, draw text showing the current multiplier value
+// Optionally, draw text showing the current heat level above the bar
 draw_set_color(c_white);
-draw_text(bar_x + max_display_width + 10, bar_y, string(knockback_multiplier));
+draw_text(heat_bar_x + heat_bar_width + 10, heat_bar_y, string(minigun_heat));
+

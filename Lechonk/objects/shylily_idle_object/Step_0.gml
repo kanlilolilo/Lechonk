@@ -52,8 +52,8 @@ if (_key_left) {
     last_direction = 1; // Remember right
 }
 
-// Fire bullets based on direction
-if (_key_throw) { // Fire when Space is held down
+// Fire bullets based on direction and check if the minigun is overheated
+if (_key_throw && minigun_heat < max_heat) { // Fire when F is pressed and not overheated
     if (fire_timer <= 0) {
         // Create the bullet
         var bullet = instance_create_layer(x, y, "Instances", shylily_bullet_object);
@@ -63,6 +63,14 @@ if (_key_throw) { // Fire when Space is held down
 
         // Reset fire timer
         fire_timer = fire_rate;
+
+        // Increase heat after firing
+        minigun_heat += heat_per_shot;
+
+        // Ensure the heat doesn't exceed the max limit
+        if (minigun_heat > max_heat) {
+            minigun_heat = max_heat;
+        }
     }
 }
 
@@ -70,6 +78,21 @@ if (_key_throw) { // Fire when Space is held down
 if (fire_timer > 0) {
     fire_timer--;
 }
+
+// Cool down the minigun if it's not firing
+if (minigun_heat > 0 && !_key_throw) {
+    minigun_heat -= cool_down_rate;
+    if (minigun_heat < 0) {
+        minigun_heat = 0;  // Prevent heat from going below 0
+    }
+}
+
+// Overheating logic: When heat exceeds max, prevent firing
+if (minigun_heat >= max_heat) {
+    // Prevent firing until cool down
+    fire_timer = fire_rate; // Optional: Prevent firing temporarily even if button is pressed
+}
+
 
 // Decrease cooldown timer
 if (knockback_cooldown > 0) {
