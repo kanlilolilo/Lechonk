@@ -35,13 +35,16 @@
   "name":"Lechonk",
   "resources":[
     {"id":{"name":"shylily_idle_object","path":"objects/shylily_idle_object/shylily_idle_object.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"soviet_union_object","path":"objects/soviet_union_object/soviet_union_object.yy",},},
+    {"id":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
+    {"id":{"name":"map_test_sprite","path":"sprites/map_test_sprite/map_test_sprite.yy",},},
     {"id":{"name":"shylily_idle_sprite","path":"sprites/shylily_idle_sprite/shylily_idle_sprite.yy",},},
+    {"id":{"name":"soviet_union_sprite","path":"sprites/soviet_union_sprite/soviet_union_sprite.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
