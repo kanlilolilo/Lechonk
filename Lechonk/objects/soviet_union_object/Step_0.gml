@@ -46,11 +46,21 @@ if (place_meeting(x, y+vsp, collision_object)) {
 y = y + vsp;
 
 
-// Check if fire button is pressed
+// Fire bullets based on direction
 if (keyboard_check(vk_space)) { // Fire when Space is held down
     if (fire_timer <= 0) {
-        // Create a bullet at the player's position
-        instance_create_layer(x, y, "Instances", vork_object);
+        // Create the bullet
+        var bullet = instance_create_layer(x, y, "Instances", vork_object);
+
+        // Update last_direction based on movement keys
+        if (_key_left) {
+            last_direction = -1; // Remember left
+        } else if (_key_right) {
+            last_direction = 1; // Remember right
+        }
+
+        // Set bullet speed based on last_direction
+        bullet.speed = last_direction * 10;
 
         // Reset fire timer
         fire_timer = fire_rate;
