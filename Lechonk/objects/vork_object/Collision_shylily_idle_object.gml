@@ -11,5 +11,10 @@ other.is_knocked_back = true;
 // Optionally, reset a knockback timer if you're using one
 other.knockback_timer = 0;
 
+if (other.knockback_multiplier > 1.2) {
+	other.knockback_multiplier += 0.1;
+}
+other.knockback_multiplier += 0.02;
+
 // Destroy the bullet after collision
 instance_destroy();
