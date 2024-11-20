@@ -20,15 +20,15 @@ var player_x = x;  // Character's X position
 var player_y = y;  // Character's Y position
 
 // Initialize the width and height of the heat bar
-var heat_bar_width = 200; // Width of the bar
-var heat_bar_height = 20; // Height of the bar
+var heat_bar_width = 50; // Width of the bar
+var heat_bar_height = 8; // Height of the bar
 
 // Calculate the current width of the heat bar based on the minigun's heat
 var current_heat_width = (minigun_heat / max_heat) * heat_bar_width;
 
 // Heat bar position relative to the player (above the player's head)
 var heat_bar_x = player_x - (heat_bar_width / 2);  // Center the bar above the player
-var heat_bar_y = player_y - sprite_height - 10;    // Position the bar slightly above the player's head
+var heat_bar_y = player_y - sprite_height + 5;    // Position the bar slightly above the player's head
 
 // Draw the background of the heat bar (gray)
 draw_set_color(c_black);
@@ -43,8 +43,4 @@ if (minigun_heat >= max_heat) {
 
 // Draw the actual heat bar
 draw_rectangle(heat_bar_x, heat_bar_y, heat_bar_x + current_heat_width, heat_bar_y + heat_bar_height, false);
-
-// Optionally, draw text showing the current heat level above the bar
-draw_set_color(c_white);
-draw_text(heat_bar_x + heat_bar_width + 10, heat_bar_y, string(minigun_heat));
 
