@@ -52,14 +52,15 @@ if (keyboard_check(vk_space)) { // Fire when Space is held down
         // Create the bullet
         var bullet = instance_create_layer(x, y, "Instances", shylily_bullet_object);
 
-if (_key_left) {
-    bullet.speed = -10;
-	last_direction = -1; // Remember left
-} else if (_key_right) {
-    bullet.speed = 10;
-	last_direction = 1; // Remember right
-}
+        // Update last_direction based on movement keys
+        if (_key_left) {
+            last_direction = -1; // Remember left
+        } else if (_key_right) {
+            last_direction = 1; // Remember right
+        }
 
+        // Set bullet speed based on last_direction
+        bullet.speed = last_direction * 10;
 
         // Reset fire timer
         fire_timer = fire_rate;

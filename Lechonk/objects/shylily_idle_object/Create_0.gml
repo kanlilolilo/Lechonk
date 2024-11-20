@@ -5,3 +5,4 @@ walksp = 2.8;
 
 fire_rate = 5; // How many steps between each bullet
 fire_timer = 0; // Counts steps to manage firing timing
+last_direction = 1; // Default to facing right
