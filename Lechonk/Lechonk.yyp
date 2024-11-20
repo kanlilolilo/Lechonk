@@ -34,9 +34,11 @@
   },
   "name":"Lechonk",
   "resources":[
+    {"id":{"name":"collision_object","path":"objects/collision_object/collision_object.yy",},},
     {"id":{"name":"shylily_idle_object","path":"objects/shylily_idle_object/shylily_idle_object.yy",},},
     {"id":{"name":"soviet_union_object","path":"objects/soviet_union_object/soviet_union_object.yy",},},
     {"id":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
+    {"id":{"name":"collition_sprite","path":"sprites/collition_sprite/collition_sprite.yy",},},
     {"id":{"name":"map_test_sprite","path":"sprites/map_test_sprite/map_test_sprite.yy",},},
     {"id":{"name":"shylily_idle_sprite","path":"sprites/shylily_idle_sprite/shylily_idle_sprite.yy",},},
     {"id":{"name":"soviet_union_sprite","path":"sprites/soviet_union_sprite/soviet_union_sprite.yy",},},

@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"soviet_union_object",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"collision_object",
+  "eventList":[],
   "managed":true,
-  "name":"soviet_union_object",
+  "name":"collision_object",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -29,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"soviet_union_sprite",
-    "path":"sprites/soviet_union_sprite/soviet_union_sprite.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
