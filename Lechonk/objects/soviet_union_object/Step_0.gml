@@ -2,7 +2,7 @@
 var _key_left = keyboard_check(vk_left);
 var _key_right = keyboard_check(vk_right);
 var _key_jump = keyboard_check(vk_up);
-var _key_throw = keyboard_check_pressed(vk_enter); // Check if ENTER is pressed
+var _key_throw = keyboard_check(vk_space); // Check if ENTER is pressed
 
 // Movement variables
 var _move = _key_right - _key_left;
@@ -45,19 +45,18 @@ if (place_meeting(x, y+vsp, collision_object)) {
 }
 y = y + vsp;
 
+// Update last_direction based on movement keys
+if (_key_left) {
+    last_direction = -1; // Remember left
+} else if (_key_right) {
+    last_direction = 1; // Remember right
+}
 
 // Fire bullets based on direction
-if (keyboard_check(vk_space)) { // Fire when Space is held down
+if (_key_throw) { // Fire when Space is held down
     if (fire_timer <= 0) {
         // Create the bullet
         var bullet = instance_create_layer(x, y, "Instances", vork_object);
-
-        // Update last_direction based on movement keys
-        if (_key_left) {
-            last_direction = -1; // Remember left
-        } else if (_key_right) {
-            last_direction = 1; // Remember right
-        }
 
         // Set bullet speed based on last_direction
         bullet.speed = last_direction * 10;
@@ -70,4 +69,21 @@ if (keyboard_check(vk_space)) { // Fire when Space is held down
 // Decrease the fire timer every step
 if (fire_timer > 0) {
     fire_timer--;
+}
+
+if (is_knocked_back) {
+    // Apply knockback to position
+    x += knockback_x;
+    y += knockback_y;
+
+    // Gradually reduce knockback velocity
+    knockback_x *= 0.9;
+    knockback_y *= 0.9;
+
+    // Stop knockback when velocity is very small
+    if (abs(knockback_x) < 0.1 && abs(knockback_y) < 0.1) {
+        knockback_x = 0;
+        knockback_y = 0;
+        is_knocked_back = false;  // End knockback state
+    }
 }

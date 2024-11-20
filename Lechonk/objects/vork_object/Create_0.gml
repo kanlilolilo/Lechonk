@@ -1,8 +1,6 @@
 speed = 10;
 direction = image_xscale == 1 ? 0 : 180;
+// Set the bullet size (smaller size)
 
-if (speed < 0) {
-    image_xscale = -1; // Flip the sprite horizontally
-} else {
-    image_xscale = 1;  // Default orientation
-}
+image_xscale = 0.2;
+image_yscale = image_xscale;

@@ -23,7 +23,7 @@
   ],
   "name":"soviet_union_jump_sprite",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":200,
-    "yorigin":320,
+    "yorigin":210,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
