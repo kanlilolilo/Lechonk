@@ -1,11 +1,12 @@
-var _key_left = keyboard_check(ord("A"));
-var _key_right = keyboard_check(ord("D"));
-var _key_jump = keyboard_check(ord("W"));
+// Input checks
+var _key_left = keyboard_check(vk_left);
+var _key_right = keyboard_check(vk_right);
+var _key_jump = keyboard_check(vk_up);
+var _key_throw = keyboard_check_pressed(vk_enter); // Check if ENTER is pressed
 
+// Movement variables
 var _move = _key_right - _key_left;
-
 hsp = _move * walksp;
-
 vsp = vsp + grv;
 
 if (place_meeting(x, y+1, collision_object) && _key_jump) {
@@ -14,16 +15,16 @@ if (place_meeting(x, y+1, collision_object) && _key_jump) {
 
 // Change sprite to walking sprite when moving, or idle when not
 if (_key_left || _key_right) {
-    sprite_index = shylily_walk_sprite; // Set sprite to walking sprite
+    sprite_index = soviet_union_walk_sprite;
 } else {
-    sprite_index = shylily_idle_sprite; // Set to idle sprite when not moving
+    sprite_index = soviet_union_sprite;
 }
 
 // Handle sprite flipping based on movement direction
 if (_key_left) {
-    image_xscale = -1; // Mirror sprite when moving left
+    image_xscale = -0.2; // Mirror sprite when moving left
 } else if (_key_right) {
-    image_xscale = 1; // Reset to original when moving right
+    image_xscale = 0.2; // Reset to original when moving right
 }
 
 // Handle horizontal movement and collisions
@@ -33,7 +34,6 @@ if (place_meeting(x+hsp, y, collision_object)) {
     }
     hsp = 0;
 }
-
 x = x + hsp;
 
 // Handle vertical movement and collisions
@@ -43,14 +43,14 @@ if (place_meeting(x, y+vsp, collision_object)) {
     }
     vsp = 0;
 }
-
 y = y + vsp;
 
+
 // Fire bullets based on direction
-if (keyboard_check(ord("Q"))) { // Fire when Space is held down
+if (keyboard_check(vk_space)) { // Fire when Space is held down
     if (fire_timer <= 0) {
         // Create the bullet
-        var bullet = instance_create_layer(x, y, "Instances", shylily_bullet_object);
+        var bullet = instance_create_layer(x, y, "Instances", vork_object);
 
         // Update last_direction based on movement keys
         if (_key_left) {
