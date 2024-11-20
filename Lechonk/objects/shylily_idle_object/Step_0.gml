@@ -45,3 +45,28 @@ if (place_meeting(x, y+vsp, collision_object)) {
 }
 
 y = y + vsp;
+
+// Fire bullets based on direction
+if (keyboard_check(vk_space)) { // Fire when Space is held down
+    if (fire_timer <= 0) {
+        // Create the bullet
+        var bullet = instance_create_layer(x, y, "Instances", shylily_bullet_object);
+
+if (_key_left) {
+    bullet.speed = -10;
+	last_direction = -1; // Remember left
+} else if (_key_right) {
+    bullet.speed = 10;
+	last_direction = 1; // Remember right
+}
+
+
+        // Reset fire timer
+        fire_timer = fire_rate;
+    }
+}
+
+// Decrease the fire timer every step
+if (fire_timer > 0) {
+    fire_timer--;
+}
