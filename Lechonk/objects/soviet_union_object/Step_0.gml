@@ -71,10 +71,15 @@ if (fire_timer > 0) {
     fire_timer--;
 }
 
+// Decrease cooldown timer
+if (knockback_cooldown > 0) {
+    knockback_cooldown -= 1;
+}
+
 if (is_knocked_back) {
     // Apply knockback to position
-    x += knockback_x;
-    y += knockback_y;
+    x += knockback_x * knockback_multiplier;
+    y += knockback_y * (knockback_multiplier * 2);
 
     // Gradually reduce knockback velocity
     knockback_x *= 0.9;

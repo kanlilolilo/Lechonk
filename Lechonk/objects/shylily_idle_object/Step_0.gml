@@ -71,23 +71,6 @@ if (fire_timer > 0) {
     fire_timer--;
 }
 
-if (is_knocked_back) {
-    // Apply knockback to position
-    x += knockback_x;
-    y += knockback_y;
-
-    // Gradually reduce knockback velocity
-    knockback_x *= 0.9;  // Reduce horizontal velocity
-    knockback_y *= 0.9;  // Reduce vertical velocity
-
-    // Stop knockback when velocity is very small
-    if (abs(knockback_x) < 0.1 && abs(knockback_y) < 0.1) {
-        knockback_x = 0;
-        knockback_y = 0;
-        is_knocked_back = false;  // End knockback state
-    }
-}
-
 // Decrease cooldown timer
 if (knockback_cooldown > 0) {
     knockback_cooldown -= 1;
@@ -95,8 +78,8 @@ if (knockback_cooldown > 0) {
 
 if (is_knocked_back) {
     // Apply knockback to position
-    x += knockback_x;
-    y += knockback_y;
+    x += knockback_x * knockback_multiplier;
+    y += knockback_y * (knockback_multiplier * 2);
 
     // Gradually reduce knockback velocity
     knockback_x *= 0.9;
