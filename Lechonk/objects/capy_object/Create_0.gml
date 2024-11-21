@@ -18,3 +18,8 @@ vibration_offset = 0;
 vibration_strength = 5; // The maximum displacement for the vibration (in pixels)
 vibration_speed = 5;    // How fast the bar vibrates (higher value = faster vibration)
 dash_timer = 10;
+
+// Check if the player falls outside the map
+if (y > room_height + 100) { // If the player falls below the map
+    game_end_sequence(); // Call a script to handle the victory
+}
