@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"capy_idle_sprite",
-  "bboxMode":2,
+  "bboxMode":0,
   "bbox_bottom":31,
   "bbox_left":2,
   "bbox_right":29,
@@ -23,7 +23,7 @@
   ],
   "name":"capy_idle_sprite",
   "nineSlice":null,
-  "origin":4,
+  "origin":0,
   "parent":{
     "name":"characters",
     "path":"folders/Sprites/characters.yy",
@@ -75,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":16,
-    "yorigin":16,
+    "xorigin":0,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

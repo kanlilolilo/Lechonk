@@ -67,7 +67,6 @@
     {"id":{"name":"fff_letsgo","path":"sounds/fff_letsgo/fff_letsgo.yy",},},
     {"id":{"name":"back_sprite","path":"sprites/back_sprite/back_sprite.yy",},},
     {"id":{"name":"capy_idle_sprite","path":"sprites/capy_idle_sprite/capy_idle_sprite.yy",},},
-    {"id":{"name":"capy_jump_sprite","path":"sprites/capy_jump_sprite/capy_jump_sprite.yy",},},
     {"id":{"name":"capy_portret","path":"sprites/capy_portret/capy_portret.yy",},},
     {"id":{"name":"capy_walk_sprite","path":"sprites/capy_walk_sprite/capy_walk_sprite.yy",},},
     {"id":{"name":"collition_sprite","path":"sprites/collition_sprite/collition_sprite.yy",},},
