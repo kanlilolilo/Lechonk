@@ -1,15 +1,16 @@
 // Input checks
 if (global.p2_selected_character != capy_object) {
-var _key_left = keyboard_check(ord("A"));  // "A" for left
-var _key_right = keyboard_check(ord("D")); // "D" for right
-var _key_jump = keyboard_check(ord("W"));  // "W" for jump
-var _key_dash = keyboard_check(ord("F"));
+    var _key_left = keyboard_check(ord("A"));  // "A" for left
+    var _key_right = keyboard_check(ord("D")); // "D" for right
+    var _key_jump = keyboard_check(ord("W"));  // "W" for jump
+    var _key_dash = keyboard_check(ord("F"));
 } else {
-var _key_left = keyboard_check(vk_left);
-var _key_right = keyboard_check(vk_right);
-var _key_jump = keyboard_check(vk_up);
-var _key_dash = keyboard_check(vk_space); // Dash key input
+    var _key_left = keyboard_check(vk_left);
+    var _key_right = keyboard_check(vk_right);
+    var _key_jump = keyboard_check(vk_up);
+    var _key_dash = keyboard_check(vk_space); // Dash key input
 }
+
 // Movement variables
 var _move = _key_right - _key_left;
 hsp = _move * walksp;
@@ -42,6 +43,9 @@ if (is_dashing) {
         is_dashing = false;
 
         // Destroy the hitbox when the dash is over
+        if (instance_exists(hitbox)) {
+            hitbox.instance_destroy();
+        }
     }
 }
 
@@ -50,11 +54,25 @@ if (place_meeting(x, y+1, collision_object) && _key_jump) {
     vsp = -7;
 }
 
-// Change sprite to walking sprite when moving, or idle when not
-if (_key_left || _key_right) {
-    sprite_index = capy_walk_sprite;
+// Change sprite based on state
+if (!place_meeting(x, y+1, collision_object)) {
+    // Player is in the air
+    if (vsp < 0) {
+        // Going up
+        sprite_index = capy_jump_sprite;
+        image_index = 0; // First frame
+    } else if (vsp > 0) {
+        // Going down
+        sprite_index = capy_jump_sprite;
+        image_index = 1; // Second frame
+    }
 } else {
-    sprite_index = capy_idle_sprite;
+    // Player is on the ground
+    if (_key_left || _key_right) {
+        sprite_index = capy_walk_sprite;
+    } else {
+        sprite_index = capy_idle_sprite;
+    }
 }
 
 // Handle sprite flipping based on movement direction
@@ -101,7 +119,7 @@ if (is_knocked_back) {
 
     // Gradually reduce knockback velocity in the x-direction
     knockback_x *= 0.9;
-	knockback_y *= 0.9;
+    knockback_y *= 0.9;
 
     // Stop knockback entirely when both x and y velocities are small
     if (abs(knockback_x) < 0.1 && abs(knockback_y) < 0.1) {
