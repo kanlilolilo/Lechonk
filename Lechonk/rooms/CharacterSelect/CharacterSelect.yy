@@ -16,6 +16,7 @@
     {"name":"inst_2E78C7CB","path":"rooms/CharacterSelect/CharacterSelect.yy",},
     {"name":"inst_412338C2","path":"rooms/CharacterSelect/CharacterSelect.yy",},
     {"name":"inst_442B7726","path":"rooms/CharacterSelect/CharacterSelect.yy",},
+    {"name":"inst_6D77F256","path":"rooms/CharacterSelect/CharacterSelect.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -30,6 +31,7 @@
         {"$GMRInstance":"v1","%Name":"inst_2E78C7CB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2E78C7CB","objectId":{"name":"waltuh_object","path":"objects/waltuh_object/waltuh_object.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":669.0,"y":154.0,},
         {"$GMRInstance":"v1","%Name":"inst_412338C2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_412338C2","objectId":{"name":"union_portret_object","path":"objects/union_portret_object/union_portret_object.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":420.0,"y":77.0,},
         {"$GMRInstance":"v1","%Name":"inst_442B7726","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_442B7726","objectId":{"name":"waltuh_object","path":"objects/waltuh_object/waltuh_object.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":673.0,"y":39.0,},
+        {"$GMRInstance":"v1","%Name":"inst_6D77F256","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6D77F256","objectId":{"name":"select_caracters","path":"objects/select_caracters/select_caracters.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":320.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_606F3378","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_606F3378","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"lines_sprite","path":"sprites/lines_sprite/lines_sprite.yy",},"x":0.0,"y":0.0,},

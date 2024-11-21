@@ -17,3 +17,6 @@ max_knockback_multiplier = 5; // Cap the multiplier to avoid excessive knockback
 vibration_offset = 0;
 vibration_strength = 5; // The maximum displacement for the vibration (in pixels)
 vibration_speed = 5;    // How fast the bar vibrates (higher value = faster vibration)
+
+image_xscale = 0.2
+image_yscale = 0.2

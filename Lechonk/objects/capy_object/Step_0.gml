@@ -1,9 +1,15 @@
 // Input checks
+if (global.p2_selected_character != capy_object) {
+var _key_left = keyboard_check(ord("A"));  // "A" for left
+var _key_right = keyboard_check(ord("D")); // "D" for right
+var _key_jump = keyboard_check(ord("W"));  // "W" for jump
+var _key_dash = keyboard_check(ord("F"));
+} else {
 var _key_left = keyboard_check(vk_left);
 var _key_right = keyboard_check(vk_right);
 var _key_jump = keyboard_check(vk_up);
 var _key_dash = keyboard_check(vk_space); // Dash key input
-
+}
 // Movement variables
 var _move = _key_right - _key_left;
 hsp = _move * walksp;
@@ -91,16 +97,16 @@ if (knockback_cooldown > 0) {
 if (is_knocked_back) {
     // Apply knockback to position
     x += knockback_x * knockback_multiplier;
-    y += knockback_y * (knockback_multiplier * 2);
+    y += abs(knockback_y * knockback_multiplier) * -1;
 
-    // Gradually reduce knockback velocity
+    // Gradually reduce knockback velocity in the x-direction
     knockback_x *= 0.9;
-    knockback_y *= 0.9;
+	knockback_y *= 0.9;
 
-    // Stop knockback when velocity is very small
+    // Stop knockback entirely when both x and y velocities are small
     if (abs(knockback_x) < 0.1 && abs(knockback_y) < 0.1) {
         knockback_x = 0;
-        knockback_y = 0;
+        knockback_y = 0;  // Reset knockback_y
         is_knocked_back = false;  // End knockback state
     }
 }
