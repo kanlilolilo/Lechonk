@@ -73,3 +73,8 @@ for (var angle = 0; angle <= current_angle; angle++) {
 // Optionally, draw text showing the current heat level above the bar
 // draw_set_color(c_white);
 // draw_text(heat_bar_x + outer_radius + 10, heat_bar_y, string(minigun_heat));
+
+// Check if the player falls outside the map
+if (y > room_height + 100) { // If the player falls below the map
+    game_end_sequence(); // Call a script to handle the victory
+}
