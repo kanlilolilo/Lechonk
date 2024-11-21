@@ -66,6 +66,7 @@
     {"id":{"name":"back_sprite","path":"sprites/back_sprite/back_sprite.yy",},},
     {"id":{"name":"capy_idle_sprite","path":"sprites/capy_idle_sprite/capy_idle_sprite.yy",},},
     {"id":{"name":"capy_portret","path":"sprites/capy_portret/capy_portret.yy",},},
+    {"id":{"name":"capy_walk_sprite","path":"sprites/capy_walk_sprite/capy_walk_sprite.yy",},},
     {"id":{"name":"collition_sprite","path":"sprites/collition_sprite/collition_sprite.yy",},},
     {"id":{"name":"credits_button_sprite","path":"sprites/credits_button_sprite/credits_button_sprite.yy",},},
     {"id":{"name":"fight_button","path":"sprites/fight_button/fight_button.yy",},},
