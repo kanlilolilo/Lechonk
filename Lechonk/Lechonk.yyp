@@ -79,6 +79,7 @@
     {"id":{"name":"lines_sprite","path":"sprites/lines_sprite/lines_sprite.yy",},},
     {"id":{"name":"logo_sprite","path":"sprites/logo_sprite/logo_sprite.yy",},},
     {"id":{"name":"map_test_sprite","path":"sprites/map_test_sprite/map_test_sprite.yy",},},
+    {"id":{"name":"new_map","path":"sprites/new_map/new_map.yy",},},
     {"id":{"name":"player1overlay_sprite","path":"sprites/player1overlay_sprite/player1overlay_sprite.yy",},},
     {"id":{"name":"player2overlay_sprite","path":"sprites/player2overlay_sprite/player2overlay_sprite.yy",},},
     {"id":{"name":"portret_black","path":"sprites/portret_black/portret_black.yy",},},
