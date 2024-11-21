@@ -1,8 +1,8 @@
 hsp = 0;
 vsp = 0;
-grv = 0.5;
+grv = 0.4;
 walksp = 3.2;
-fire_rate = 80;
+fire_rate = 60;
 fire_timer = 0;
 last_direction = 1; // Default to facing right
 // Create event (initialize knockback variables)

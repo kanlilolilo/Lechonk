@@ -37,5 +37,5 @@
     "path":"sprites/capy_idle_sprite/capy_idle_sprite.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -1,6 +1,6 @@
 speed = 10;
-knockback_power = 10;
-knockback_multiplier_increase = 0.02;
+knockback_power = 16;
+knockback_multiplier_increase = 0.025;
 // Set the bullet size (smaller size)
 
 image_xscale = 0.2;

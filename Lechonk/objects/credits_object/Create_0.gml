@@ -1,3 +1,4 @@
+audio_play_sound(thickofit, 1, true);
 // Store the credits text
 credits = [
     "Frightful Furry Fighters",
