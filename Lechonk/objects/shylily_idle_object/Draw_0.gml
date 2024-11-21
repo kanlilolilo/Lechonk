@@ -19,28 +19,42 @@ draw_rectangle(bar_x, bar_y, bar_x + max_display_width, bar_y + bar_height, fals
 var player_x = x;  // Character's X position
 var player_y = y;  // Character's Y position
 
-// Initialize the width and height of the heat bar
-var heat_bar_width = 50; // Width of the bar
-var heat_bar_height = 8; // Height of the bar
+// Initialize the radius of the heat bar (smaller donut shape)
+var outer_radius = 12.5; // Outer radius of the donut
+var inner_radius = 7.5;  // Inner radius of the donut
 
-// Calculate the current width of the heat bar based on the minigun's heat
-var current_heat_width = (minigun_heat / max_heat) * heat_bar_width;
+// Calculate the current angle of the heat bar based on the minigun's heat
+var current_angle = (minigun_heat / max_heat) * 360;  // In degrees
 
 // Heat bar position relative to the player (above the player's head)
-var heat_bar_x = player_x - (heat_bar_width / 2);  // Center the bar above the player
-var heat_bar_y = player_y - sprite_height + 5;    // Position the bar slightly above the player's head
+var heat_bar_x = player_x - 10;  // Center the donut above the player
+var heat_bar_y = player_y - sprite_height + 5;  // Position the donut slightly above the player's head
 
-// Draw the background of the heat bar (gray)
-draw_set_color(c_black);
-draw_rectangle(heat_bar_x, heat_bar_y, heat_bar_x + heat_bar_width, heat_bar_y + heat_bar_height, false);
-
-// Draw the current heat bar (color based on heat)
+// Draw the filled heat bar as a segment of the donut
 if (minigun_heat >= max_heat) {
     draw_set_color(c_red);  // Red color when overheated
 } else {
     draw_set_color(c_green);  // Green color when it's cool
 }
 
-// Draw the actual heat bar
-draw_rectangle(heat_bar_x, heat_bar_y, heat_bar_x + current_heat_width, heat_bar_y + heat_bar_height, false);
+// Draw the actual donut-shaped heat bar
+for (var angle = 0; angle <= current_angle; angle++) {
+    var x1 = heat_bar_x + outer_radius * cos(degtorad(angle));
+    var y1 = heat_bar_y + outer_radius * sin(degtorad(angle));
+    var x2 = heat_bar_x + inner_radius * cos(degtorad(angle));
+    var y2 = heat_bar_y + inner_radius * sin(degtorad(angle));
+    var x3 = heat_bar_x + inner_radius * cos(degtorad(angle + 1));
+    var y3 = heat_bar_y + inner_radius * sin(degtorad(angle + 1));
+    var x4 = heat_bar_x + outer_radius * cos(degtorad(angle + 1));
+    var y4 = heat_bar_y + outer_radius * sin(degtorad(angle + 1));
+    draw_primitive_begin(pr_trianglestrip);
+    draw_vertex(x1, y1);
+    draw_vertex(x2, y2);
+    draw_vertex(x4, y4);
+    draw_vertex(x3, y3);
+    draw_primitive_end();
+}
 
+// Optionally, draw text showing the current heat level above the bar
+// draw_set_color(c_white);
+// draw_text(heat_bar_x + outer_radius + 10, heat_bar_y, string(minigun_heat));
