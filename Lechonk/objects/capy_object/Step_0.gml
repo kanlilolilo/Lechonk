@@ -3,12 +3,12 @@ if (global.p2_selected_character != capy_object) {
 var _key_left = keyboard_check(ord("A"));  // "A" for left
 var _key_right = keyboard_check(ord("D")); // "D" for right
 var _key_jump = keyboard_check(ord("W"));  // "W" for jump
-var _key_dash = keyboard_check(ord("F"));
+var _key_throw = keyboard_check(ord("F"));
 } else {
 var _key_left = keyboard_check(vk_left);
 var _key_right = keyboard_check(vk_right);
 var _key_jump = keyboard_check(vk_up);
-var _key_dash = keyboard_check(vk_space); // Dash key input
+var _key_throw = keyboard_check(vk_space); // Dash key input
 }
 
 // Detect if stuck inside a collision (can't move horizontally)
@@ -23,47 +23,6 @@ var _move = _key_right - _key_left;
 hsp = _move * walksp;
 vsp = vsp + grv;
 
-// Update last_direction based on movement keys
-if (_key_left) {
-    last_direction = -1; // Remember left
-} else if (_key_right) {
-    last_direction = 1; // Remember right
-}
-
-// Dash variables
-if (_key_dash && !is_dashing) {
-    dash_timer = dash_duration;
-    is_dashing = true;
-    dash_speed = dash_base_speed * last_direction; // Dash in the direction the character last moved
-
-    // Create melee hitbox
-    if (!instance_exists(melee_hitbox_object)) {
-        hitbox = instance_create_layer(x + last_direction * 16, y, "Instances", melee_hitbox_object);
-		 if (instance_exists(hitbox)) {
-			hitbox.knockback_power = hitbox.knockback_power * -1;
-		 }
-    }
-}
-
-// Handle dashing
-if (is_dashing) {
-    hsp = dash_speed;
-    
-    // Update hitbox position to follow the player
-    if (instance_exists(hitbox)) {
-        hitbox.x = x + last_direction * 16;
-        hitbox.y = y;
-    }
-    
-    dash_timer--;
-    if (dash_timer <= 0) {
-        is_dashing = false;
-
-        // Destroy the hitbox when the dash is over
-    }
-}
-
-// Handle jumping
 if (place_meeting(x, y+1, collision_object) && _key_jump) {
     vsp = -7;
 }
@@ -99,6 +58,47 @@ if (place_meeting(x, y+vsp, collision_object)) {
     vsp = 0;
 }
 y = y + vsp;
+
+// Update last_direction based on movement keys
+if (_key_left) {
+    last_direction = -1; // Remember left
+} else if (_key_right) {
+    last_direction = 1; // Remember right
+}
+
+if (_key_throw) { // Fire when the attack button is held down
+    if (fire_timer <= 0) {
+        // Create the bullet
+        var bullet = instance_create_layer(x, y, "Instances", melee_hitbox_object);
+
+        // Set bullet speed and direction based on last_direction
+        bullet.speed = last_direction * 10;
+        bullet.bullet_direction = last_direction; // Use direction, not last_direction * 10
+
+        // Reset fire timer
+        fire_timer = fire_rate;
+
+        // Dash when firing
+        var dash_speed = 10; // Set the dash speed
+        var dash_duration = 10; // Set the number of frames the dash lasts
+        hspeed = dash_speed * last_direction; // Horizontal dash speed based on last_direction
+        dash_timer = dash_duration;
+    }
+}
+
+// If the dash timer is active, stop moving after dash duration
+if (dash_timer > 0) {
+    dash_timer -= 1;
+    if (dash_timer <= 0) {
+        hspeed = 0; // Stop horizontal movement after dash
+        vspeed = 0; // Stop vertical movement after dash
+    }
+}
+
+// Decrease the fire timer every step
+if (fire_timer > 0) {
+    fire_timer--;
+}
 
 // Decrease cooldown timer
 if (knockback_cooldown > 0) {

@@ -1,12 +1,20 @@
-// Initialize a counter if it doesn't exist
-if (!variable_instance_exists(self, "destroy_timer")) {
-    destroy_timer = 0; // Start counting at 0
+// Move the bullet horizontally
+x += hsp;
+
+// Destroy the bullet if it leaves the room
+if (x < 0 || x > room_width || y < 0 || y > room_height) {
+    instance_destroy();
 }
 
-// Increment the timer
-destroy_timer++;
 
-// Destroy the instance after 10 steps
-if (destroy_timer >= 10) {
-    instance_destroy(); // Destroy this instance
+if (speed <= 0) {
+	image_xscale = -0.2;
+}
+
+// Increment the counter each step
+steps_counter += 1;
+
+// If 10 steps have passed, destroy the object
+if (steps_counter >= 10) {
+    instance_destroy();
 }

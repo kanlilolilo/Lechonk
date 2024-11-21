@@ -1,7 +1,10 @@
-// obj_melee_hitbox Create event
+speed = 10;
+knockback_power = 15;
+knockback_multiplier_increase = 0.03;
+// Set the bullet size (smaller size)
 
-// Knockback properties
-knockback_power = 20; // Adjust this value for knockback strength
-knockback_multiplier_increase = 0.04;
-knockback_direction = 0;
-knockback_timer = 0;
+image_xscale = 0.2;
+image_yscale = image_xscale;
+hsp = 0; // Test if it moves left
+// Initialize a step counter
+steps_counter = 0;

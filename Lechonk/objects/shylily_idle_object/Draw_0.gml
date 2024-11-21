@@ -2,7 +2,7 @@
 draw_self();
 
 // Then draw the knockback multiplier bar
-var bar_x = 200;
+var bar_x = 220;
 var bar_y = 20;
 var bar_width = 20;
 var bar_height = 20;
