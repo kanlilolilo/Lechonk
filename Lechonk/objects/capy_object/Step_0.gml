@@ -23,6 +23,13 @@ var _move = _key_right - _key_left;
 hsp = _move * walksp;
 vsp = vsp + grv;
 
+// Update last_direction based on movement keys
+if (_key_left) {
+    last_direction = -1; // Remember left
+} else if (_key_right) {
+    last_direction = 1; // Remember right
+}
+
 // Dash variables
 if (_key_dash && !is_dashing) {
     dash_timer = dash_duration;
@@ -32,6 +39,9 @@ if (_key_dash && !is_dashing) {
     // Create melee hitbox
     if (!instance_exists(melee_hitbox_object)) {
         hitbox = instance_create_layer(x + last_direction * 16, y, "Instances", melee_hitbox_object);
+		 if (instance_exists(hitbox)) {
+			hitbox.knockback_power = hitbox.knockback_power * -1;
+		 }
     }
 }
 
@@ -89,13 +99,6 @@ if (place_meeting(x, y+vsp, collision_object)) {
     vsp = 0;
 }
 y = y + vsp;
-
-// Update last_direction based on movement keys
-if (_key_left) {
-    last_direction = -1; // Remember left
-} else if (_key_right) {
-    last_direction = 1; // Remember right
-}
 
 // Decrease cooldown timer
 if (knockback_cooldown > 0) {
