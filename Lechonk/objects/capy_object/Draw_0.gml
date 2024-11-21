@@ -2,10 +2,14 @@
 draw_self();
 
 // Then draw the knockback multiplier bar
-var bar_x = 420;
+if (global.p2_selected_character != capy_object) {
+var bar_x = 20;
+} else {
+var bar_x = 820;
+}
 var bar_y = 20;
 var bar_width = 20;
-var bar_height = 20;
+var bar_height = 20
 var current_width = knockback_multiplier * bar_width;
 var max_display_width = max_knockback_multiplier * bar_width;
 
@@ -26,4 +30,8 @@ draw_rectangle(bar_x, bar_y, bar_x + current_width, bar_y + bar_height, false);
 
 // Optionally, draw text showing the current multiplier value
 draw_set_color(c_white);
-draw_text(bar_x + max_display_width + 10, bar_y, string(knockback_multiplier));
+if (global.p2_selected_character != capy_object) {
+draw_text(bar_x + max_display_width + -55, bar_y, "P1");
+} else {
+draw_text(bar_x + max_display_width + -55, bar_y, "P2");
+}
