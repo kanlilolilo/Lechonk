@@ -1,4 +1,7 @@
 // In the Left Pressed (or Left Released) event of a character selection object
+
+audio_play_sound(soviet, 0, false);
+
 if (global.selection_turn == 1) {
     global.p1_selected_character = soviet_union_object; // Store the id of the selected character for Player 1
     global.selection_turn = 2; // Switch to Player 2's turn
