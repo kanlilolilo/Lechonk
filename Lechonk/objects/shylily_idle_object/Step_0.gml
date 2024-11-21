@@ -1,14 +1,14 @@
 // Input checks
 if (global.p2_selected_character != shylily_idle_object) {
-var _key_left = keyboard_check(ord("A"));  // "A" for left
-var _key_right = keyboard_check(ord("D")); // "D" for right
-var _key_jump = keyboard_check(ord("W"));  // "W" for jump
-var _key_throw = keyboard_check(ord("F"));
+    var _key_left = keyboard_check(ord("A"));  // "A" for left
+    var _key_right = keyboard_check(ord("D")); // "D" for right
+    var _key_jump = keyboard_check(ord("W"));  // "W" for jump
+    var _key_throw = keyboard_check(ord("F"));
 } else {
-var _key_left = keyboard_check(vk_left);
-var _key_right = keyboard_check(vk_right);
-var _key_jump = keyboard_check(vk_up);
-var _key_throw = keyboard_check(vk_space); // Dash key input
+    var _key_left = keyboard_check(vk_left);
+    var _key_right = keyboard_check(vk_right);
+    var _key_jump = keyboard_check(vk_up);
+    var _key_throw = keyboard_check(vk_space); // Dash key input
 }
 
 // Movement variables
@@ -52,6 +52,13 @@ if (place_meeting(x, y+vsp, collision_object)) {
 }
 y = y + vsp;
 
+// Detect if stuck inside a collision (can't move horizontally)
+if (place_meeting(x, y, collision_object) && (hsp == 0)) {
+    // If stuck horizontally, try moving up a little to avoid getting stuck in a collision
+    y -= 3; // Apply small upward force (adjust value to suit your game)
+    vsp = 0; // Reset vertical speed to avoid falling back down immediately
+}
+
 // Update last_direction based on movement keys
 if (_key_left) {
     last_direction = -1; // Remember left
@@ -67,6 +74,7 @@ if (_key_throw && minigun_heat < max_heat) { // Fire when F is pressed and not o
 
         // Set bullet speed based on last_direction
         bullet.speed = last_direction * 10;
+        bullet.bullet_direction = last_direction;
 
         // Reset fire timer
         fire_timer = fire_rate;
@@ -100,7 +108,6 @@ if (minigun_heat >= max_heat) {
     fire_timer = fire_rate; // Optional: Prevent firing temporarily even if button is pressed
 }
 
-
 // Decrease cooldown timer
 if (knockback_cooldown > 0) {
     knockback_cooldown -= 1;
@@ -113,7 +120,7 @@ if (is_knocked_back) {
 
     // Gradually reduce knockback velocity in the x-direction
     knockback_x *= 0.9;
-	knockback_y *= 0.9;
+    knockback_y *= 0.9;
 
     // Stop knockback entirely when both x and y velocities are small
     if (abs(knockback_x) < 0.1 && abs(knockback_y) < 0.1) {
@@ -122,4 +129,3 @@ if (is_knocked_back) {
         is_knocked_back = false;  // End knockback state
     }
 }
-

@@ -11,6 +11,13 @@ var _key_jump = keyboard_check(vk_up);
 var _key_throw = keyboard_check(vk_space); // Dash key input
 }
 
+// Detect if stuck inside a collision (can't move horizontally)
+if (place_meeting(x, y, collision_object) && (hsp == 0)) {
+    // If stuck horizontally, try moving up a little to avoid getting stuck in a collision
+    y -= 3; // Apply small upward force (adjust value to suit your game)
+    vsp = 0; // Reset vertical speed to avoid falling back down immediately
+}
+
 // Movement variables
 var _move = _key_right - _key_left;
 hsp = _move * walksp;
@@ -67,6 +74,7 @@ if (_key_throw) { // Fire when Space is held down
 
         // Set bullet speed based on last_direction
         bullet.speed = last_direction * 10;
+		bullet.bullet_direction = last_direction
 
         // Reset fire timer
         fire_timer = fire_rate;

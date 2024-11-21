@@ -1,5 +1,8 @@
 // Always reapply knockback velocities
-other.knockback_x = knockback_power * cos(direction);  // Horizontal knockback
+
+
+
+other.knockback_x = (knockback_power * cos(direction)) * bullet_direction;  // Horizontal knockback
 other.knockback_y = knockback_power * -0.4;  // Vertical knockback (upward)
 
 // Reset knockback state to ensure it applies again

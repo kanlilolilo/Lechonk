@@ -1,6 +1,11 @@
 // Always reapply knockback velocities
+
+if(speed < 0) {
+	knockback_power = knockback_power * -1
+}
+
 other.knockback_x = knockback_power * cos(direction);  // Horizontal knockback
-other.knockback_y = knockback_power * 0.2;  // Vertical knockback (upward)
+other.knockback_y = knockback_power * -0.2;  // Vertical knockback (upward)
 
 // Reset knockback state to ensure it applies again
 other.is_knocked_back = true;
