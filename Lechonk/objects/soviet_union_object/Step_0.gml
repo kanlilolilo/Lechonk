@@ -1,9 +1,9 @@
 // Input checks
 if (global.p2_selected_character != soviet_union_object) {
-var _key_left = keyboard_check(ord("D"));  // "A" for left
-var _key_right = keyboard_check(ord("G")); // "D" for right
-var _key_jump = keyboard_check(ord("R"));  // "W" for jump
-var _key_throw = keyboard_check(ord("A"));
+var _key_left = keyboard_check(ord("A"));  // "A" for left
+var _key_right = keyboard_check(ord("D")); // "D" for right
+var _key_jump = keyboard_check(ord("W"));  // "W" for jump
+var _key_throw = keyboard_check(vk_shift);
 } else {
 var _key_left = keyboard_check(vk_left);
 var _key_right = keyboard_check(vk_right);
