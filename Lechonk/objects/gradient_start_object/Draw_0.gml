@@ -47,7 +47,7 @@ draw_set_color(c_black);  // Set color to black
 draw_rectangle(x1, y2, x2, room_height, false);  // Draw black rectangle from y2 to the bottom of the room
 
 // Set the font to 'coderscrux'
-draw_set_font(coderscrux);
+draw_set_font(undertale);
 
 // Set all text color to white
 draw_set_color(c_white);
@@ -59,19 +59,7 @@ var text_height = string_height(text);
 
 // Center the text within the rectangle
 var text_x = (room_width - text_width) / 2;
-var text_y = (y1 + y2 - text_height) / 2 + 3;
+var text_y = (y1 + y2 - text_height) / 2 - 2;
 
 // Draw the "PRESS ANY BUTTON" text in the center of the rectangle
 draw_text(text_x, text_y, text);
-
-// Draw "lechonk fan club" in the bottom left of the black area
-var fan_club_text = "LeChonk FAN ClubTM";
-var fan_club_text_width = string_width(fan_club_text);
-var fan_club_text_height = string_height(fan_club_text);
-
-// Positioning it in the bottom left corner with padding
-var fan_club_text_x = x1 + 10;  // 10 pixels from the left
-var fan_club_text_y = room_height - fan_club_text_height - 10;  // 10 pixels from the bottom
-
-// Draw the "lechonk fan club" text
-draw_text(fan_club_text_x, fan_club_text_y, fan_club_text);
