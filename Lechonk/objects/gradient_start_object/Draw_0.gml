@@ -3,9 +3,9 @@ var time_seconds = current_time / 1000;  // Convert milliseconds to seconds
 
 // Define the rectangle dimensions
 var x1 = 0;
-var y1 = 670;
+var y1 = 700;
 var x2 = room_width;
-var y2 = 730;
+var y2 = 760;
 
 // Define the colors as RGB values (use make_color_rgb for specific RGB colors)
 var color1 = make_color_rgb(223, 113, 38);  // DF7126
