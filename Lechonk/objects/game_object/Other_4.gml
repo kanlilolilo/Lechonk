@@ -1,1 +1,0 @@
-audio_play_sound(fff_letsgo, 0, false);

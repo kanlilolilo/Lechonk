@@ -53,7 +53,7 @@ draw_set_font(coderscrux);
 draw_set_color(c_white);
 
 // Calculate the position to center the "PRESS ANY BUTTON" text
-var text = "PRESS ANY BUTTON";
+var text = "Press any button...";
 var text_width = string_width(text);
 var text_height = string_height(text);
 
@@ -65,7 +65,7 @@ var text_y = (y1 + y2 - text_height) / 2 + 3;
 draw_text(text_x, text_y, text);
 
 // Draw "lechonk fan club" in the bottom left of the black area
-var fan_club_text = "lechonk fan club";
+var fan_club_text = "LeChonk FAN ClubTM";
 var fan_club_text_width = string_width(fan_club_text);
 var fan_club_text_height = string_height(fan_club_text);
 

@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"game_object",
+  "%Name":"logo_2_object",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"game_object",
+  "name":"logo_2_object",
   "overriddenProperties":[],
   "parent":{
     "name":"screens",
@@ -29,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"logo_2_gif_sprite",
+    "path":"sprites/logo_2_gif_sprite/logo_2_gif_sprite.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
