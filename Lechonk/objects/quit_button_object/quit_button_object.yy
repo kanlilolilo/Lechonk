@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"settings_button_sprite",
-    "path":"sprites/settings_button_sprite/settings_button_sprite.yy",
+    "name":"quit_button_sprite",
+    "path":"sprites/quit_button_sprite/quit_button_sprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,
