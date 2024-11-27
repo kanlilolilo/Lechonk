@@ -6,7 +6,6 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_6E8E7F2C","path":"rooms/CharacterSelect/CharacterSelect.yy",},
     {"name":"inst_48522DFA","path":"rooms/CharacterSelect/CharacterSelect.yy",},
     {"name":"inst_1067B87B","path":"rooms/CharacterSelect/CharacterSelect.yy",},
     {"name":"inst_67150C90","path":"rooms/CharacterSelect/CharacterSelect.yy",},
@@ -21,7 +20,6 @@
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_6E8E7F2C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6E8E7F2C","objectId":{"name":"back_button_object","path":"objects/back_button_object/back_button_object.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.0,"x":160.0,"y":64.0,},
         {"$GMRInstance":"v1","%Name":"inst_48522DFA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_48522DFA","objectId":{"name":"fight_button_object","path":"objects/fight_button_object/fight_button_object.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":1504.0,"y":896.0,},
         {"$GMRInstance":"v1","%Name":"inst_1067B87B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1067B87B","objectId":{"name":"capy_portret_object","path":"objects/capy_portret_object/capy_portret_object.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1152.0,"y":96.0,},
         {"$GMRInstance":"v1","%Name":"inst_67150C90","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_67150C90","objectId":{"name":"shylily_portret_object","path":"objects/shylily_portret_object/shylily_portret_object.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":160.0,},

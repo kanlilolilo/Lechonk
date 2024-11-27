@@ -31,7 +31,9 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"bgvideo.mp4","CopyToMask":-1,"filePath":"datafiles","name":"bgvideo.mp4","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -41,12 +43,11 @@
   "resources":[
     {"id":{"name":"coderscrux","path":"fonts/coderscrux/coderscrux.yy",},},
     {"id":{"name":"undertale","path":"fonts/undertale/undertale.yy",},},
-    {"id":{"name":"back_button_object","path":"objects/back_button_object/back_button_object.yy",},},
+    {"id":{"name":"background_video_object","path":"objects/background_video_object/background_video_object.yy",},},
     {"id":{"name":"capy_object","path":"objects/capy_object/capy_object.yy",},},
     {"id":{"name":"capy_portret_object","path":"objects/capy_portret_object/capy_portret_object.yy",},},
     {"id":{"name":"collision_object","path":"objects/collision_object/collision_object.yy",},},
     {"id":{"name":"credits_button_object","path":"objects/credits_button_object/credits_button_object.yy",},},
-    {"id":{"name":"credits_object","path":"objects/credits_object/credits_object.yy",},},
     {"id":{"name":"fight_button_object","path":"objects/fight_button_object/fight_button_object.yy",},},
     {"id":{"name":"gradient_start_object","path":"objects/gradient_start_object/gradient_start_object.yy",},},
     {"id":{"name":"hahajebentdood","path":"objects/hahajebentdood/hahajebentdood.yy",},},
@@ -67,7 +68,6 @@
     {"id":{"name":"vork_object","path":"objects/vork_object/vork_object.yy",},},
     {"id":{"name":"waltuh_object","path":"objects/waltuh_object/waltuh_object.yy",},},
     {"id":{"name":"CharacterSelect","path":"rooms/CharacterSelect/CharacterSelect.yy",},},
-    {"id":{"name":"Credits","path":"rooms/Credits/Credits.yy",},},
     {"id":{"name":"Deathscreen","path":"rooms/Deathscreen/Deathscreen.yy",},},
     {"id":{"name":"IntroScreen","path":"rooms/IntroScreen/IntroScreen.yy",},},
     {"id":{"name":"StartScreen","path":"rooms/StartScreen/StartScreen.yy",},},
@@ -85,7 +85,6 @@
     {"id":{"name":"Sound4","path":"sounds/Sound4/Sound4.yy",},},
     {"id":{"name":"soviet","path":"sounds/soviet/soviet.yy",},},
     {"id":{"name":"thickofit","path":"sounds/thickofit/thickofit.yy",},},
-    {"id":{"name":"back_button_sprite","path":"sprites/back_button_sprite/back_button_sprite.yy",},},
     {"id":{"name":"capy_idle_sprite","path":"sprites/capy_idle_sprite/capy_idle_sprite.yy",},},
     {"id":{"name":"capy_portret","path":"sprites/capy_portret/capy_portret.yy",},},
     {"id":{"name":"capy_walk_sprite","path":"sprites/capy_walk_sprite/capy_walk_sprite.yy",},},
@@ -127,7 +126,6 @@
     {"roomId":{"name":"CharacterSelect","path":"rooms/CharacterSelect/CharacterSelect.yy",},},
     {"roomId":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
     {"roomId":{"name":"Deathscreen","path":"rooms/Deathscreen/Deathscreen.yy",},},
-    {"roomId":{"name":"Credits","path":"rooms/Credits/Credits.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
