@@ -9,7 +9,7 @@ if (keyboard_check_pressed(vk_enter)) {
     if (selected_character == capy_portret_object) {
         audio_play_sound(capy, 0, false);  // Play sound for Capy
     } else if (selected_character == shylily_portret_object) {
-        audio_play_sound(soviet, 0, false);  // Play sound for Shylily
+        audio_play_sound(shy, 0, false);  // Play sound for Shylily
     } else if (selected_character == union_portret_object) {
         audio_play_sound(soviet, 0, false);  // Play sound for Union
     }
