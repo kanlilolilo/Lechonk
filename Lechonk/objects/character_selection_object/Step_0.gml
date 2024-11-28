@@ -6,35 +6,51 @@ if (keyboard_check_pressed(vk_enter)) {
     var selected_character = characters[current_index];
     
     // Play sound based on the selected character
-    if (selected_character == capy_portret_object) {
-        audio_play_sound(capy, 0, false);  // Play sound for Capy
-    } else if (selected_character == shylily_portret_object) {
-        audio_play_sound(shy, 0, false);  // Play sound for Shylily
-    } else if (selected_character == union_portret_object) {
-        audio_play_sound(soviet, 0, false);  // Play sound for Union
+    switch (selected_character) {
+        case capy_portret_object:
+            audio_play_sound(capy, 0, false);  // Play sound for Capy
+            break;
+        case shylily_portret_object:
+            audio_play_sound(shy, 0, false);  // Play sound for Shylily
+            break;
+        case union_portret_object:
+            audio_play_sound(soviet, 0, false);  // Play sound for Union
+            break;
     }
 
     // Handle character selection for Player 1 and Player 2 based on whose turn it is
-    if (global.selection_turn == 1) {
-        // Player 1 selects their character
-        if (selected_character == capy_portret_object) {
-            global.p1_selected_character = capy_object;  // Store Capy for Player 1
-        } else if (selected_character == shylily_portret_object) {
-            global.p1_selected_character = shylily_idle_object;  // Correctly store Shylily for Player 1
-        } else if (selected_character == union_portret_object) {
-            global.p1_selected_character = soviet_union_object;  // Store Union for Player 1
-        }
-        global.selection_turn = 2;  // Switch to Player 2's turn
-    } else if (global.selection_turn == 2) {
-        // Player 2 selects their character
-        if (selected_character == capy_portret_object) {
-            global.p2_selected_character = capy_object;  // Store Capy for Player 2
-        } else if (selected_character == shylily_portret_object) {
-            global.p2_selected_character = shylily_idle_object;  // Correctly store Shylily for Player 2
-        } else if (selected_character == union_portret_object) {
-            global.p2_selected_character = soviet_union_object;  // Store Union for Player 2
-        }
-        global.selection_turn = 1;  // Switch back to Player 1's turn or end selection process
+    switch (global.selection_turn) {
+        case 1:
+            // Player 1 selects their character
+            switch (selected_character) {
+                case capy_portret_object:
+                    global.p1_selected_character = capy_object;  // Store Capy for Player 1
+                    break;
+                case shylily_portret_object:
+                    global.p1_selected_character = shylily_idle_object;  // Store Shylily for Player 1
+                    break;
+                case union_portret_object:
+                    global.p1_selected_character = soviet_union_object;  // Store Union for Player 1
+                    break;
+            }
+            global.selection_turn = 2;  // Switch to Player 2's turn
+            break;
+        
+        case 2:
+            // Player 2 selects their character
+            switch (selected_character) {
+                case capy_portret_object:
+                    global.p2_selected_character = capy_object;  // Store Capy for Player 2
+                    break;
+                case shylily_portret_object:
+                    global.p2_selected_character = shylily_idle_object;  // Store Shylily for Player 2
+                    break;
+                case union_portret_object:
+                    global.p2_selected_character = soviet_union_object;  // Store Union for Player 2
+                    break;
+            }
+            global.selection_turn = 1;  // Switch back to Player 1's turn or end selection process
+            break;
     }
 }
 
