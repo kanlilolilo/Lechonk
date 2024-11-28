@@ -8,8 +8,8 @@
   "name":"hahajebentdood",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"screens",
+    "path":"folders/Objects/screens.yy",
   },
   "parentObjectId":null,
   "persistent":false,

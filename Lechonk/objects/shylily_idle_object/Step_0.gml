@@ -72,6 +72,8 @@ if (_key_throw && minigun_heat < max_heat) { // Fire when F is pressed and not o
         // Create the bullet
         var bullet = instance_create_layer(x, y, "Instances", shylily_bullet_object);
 
+
+		bullet.bullet_id = player_id;
         // Set bullet speed based on last_direction
         bullet.speed = last_direction * 10;
         bullet.bullet_direction = last_direction;
@@ -131,5 +133,5 @@ if (is_knocked_back) {
 }
 
 if (y > room_height + 100) { // If the player falls below the map
-    game_end_sequence(); // Call a script to handle the victory
+   // game_end_sequence(); // Call a script to handle the victory
 }
