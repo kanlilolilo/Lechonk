@@ -1,13 +1,15 @@
 // Input checks
 if (global.p2_selected_character != capy_object) {
-var _key_left = keyboard_check(ord("A"));  // "A" for left
-var _key_right = keyboard_check(ord("D")); // "D" for right
-var _key_jump = keyboard_check(ord("W"));  // "W" for jump
+var _key_left = keyboard_check(ord("A"));
+var _key_right = keyboard_check(ord("D")); 
+var _key_jump = keyboard_check(ord("W"));  
+var _key_down = keyboard_check(ord("S"));
 var _key_throw = keyboard_check(vk_shift);
 } else {
 var _key_left = keyboard_check(vk_left);
 var _key_right = keyboard_check(vk_right);
 var _key_jump = keyboard_check(vk_up);
+var _key_down = keyboard_check(vk_down);
 var _key_throw = keyboard_check(vk_control); // Dash key input
 }
 
@@ -125,3 +127,23 @@ if (is_knocked_back) {
 if (y > room_height + 100) { // If the player falls below the map
     game_end_sequence(); // Call a script to handle the victory
 }
+// Change sprite based on movement state
+if (_key_down) {
+    // Change to down sprite if the down key is pressed
+    sprite_index = capy_down_sprite;
+} else if (vsp < 0) {
+    // Moving upwards
+    sprite_index = capy_jump_sprite;
+    image_index = 0; // Set to first frame of the jump sprite
+} else if (vsp > 0) {
+    // Moving downwards
+    sprite_index = capy_jump_sprite;
+    image_index = 1; // Set to second frame of the jump sprite
+} else if (_key_left || _key_right) {
+    // Moving horizontally on the ground
+    sprite_index = capy_walk_sprite;
+} else {
+    // Idle on the ground
+    sprite_index = capy_idle_sprite;
+}
+

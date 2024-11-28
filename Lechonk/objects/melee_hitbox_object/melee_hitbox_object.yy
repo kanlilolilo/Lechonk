@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"capy_idle_sprite",
-    "path":"sprites/capy_idle_sprite/capy_idle_sprite.yy",
+    "name":"capy_down_sprite",
+    "path":"sprites/capy_down_sprite/capy_down_sprite.yy",
   },
   "spriteMaskId":null,
   "visible":false,

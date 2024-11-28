@@ -37,5 +37,5 @@
     "path":"sprites/capy_portret/capy_portret.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

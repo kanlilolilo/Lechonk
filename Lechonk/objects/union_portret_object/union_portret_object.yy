@@ -37,5 +37,5 @@
     "path":"sprites/union_portret/union_portret.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
