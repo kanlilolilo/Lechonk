@@ -23,8 +23,12 @@ var _move = _key_right - _key_left;
 hsp = _move * walksp;
 vsp = vsp + grv;
 
-if (place_meeting(x, y+1, collision_object) && _key_jump) {
-    vsp = -7;
+if (_key_jump) {
+    if (place_meeting(x, y + 1, collision_object)) {
+        vsp = -7; // Jump velocity
+    } else if (place_meeting(x, y + 1, collision_top_object)) {
+        vsp = -7; // Jump velocity
+    }
 }
 
 // Change sprite to walking sprite when moving, or idle when not
@@ -57,7 +61,18 @@ if (place_meeting(x, y+vsp, collision_object)) {
     }
     vsp = 0;
 }
-y = y + vsp;
+
+// Check for collision with collision_top_object
+if (vsp > 0 && place_meeting(x, y + vsp, collision_top_object)) { 
+    // If falling (vsp > 0) and colliding from the top, stop falling
+    while (!place_meeting(x, y + 1, collision_top_object)) {
+        y += 1;
+    }
+    vsp = 0;
+}
+
+// Apply vertical movement
+y += vsp;
 
 // Update last_direction based on movement keys
 if (_key_left) {

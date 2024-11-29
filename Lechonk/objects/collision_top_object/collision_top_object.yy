@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"collision_object",
+  "%Name":"collision_top_object",
   "eventList":[],
   "managed":true,
-  "name":"collision_object",
+  "name":"collision_top_object",
   "overriddenProperties":[],
   "parent":{
     "name":"characters",
@@ -28,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"collision_sprite",
-    "path":"sprites/collision_sprite/collision_sprite.yy",
+    "name":"collision_top_sprite",
+    "path":"sprites/collision_top_sprite/collision_top_sprite.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
