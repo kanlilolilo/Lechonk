@@ -70,6 +70,7 @@
     {"id":{"name":"waltuh_object","path":"objects/waltuh_object/waltuh_object.yy",},},
     {"id":{"name":"CharacterSelect","path":"rooms/CharacterSelect/CharacterSelect.yy",},},
     {"id":{"name":"Deathscreen","path":"rooms/Deathscreen/Deathscreen.yy",},},
+    {"id":{"name":"FryVentureRoom","path":"rooms/FryVentureRoom/FryVentureRoom.yy",},},
     {"id":{"name":"IntroScreen","path":"rooms/IntroScreen/IntroScreen.yy",},},
     {"id":{"name":"StartScreen","path":"rooms/StartScreen/StartScreen.yy",},},
     {"id":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
@@ -95,6 +96,7 @@
     {"id":{"name":"collition_sprite","path":"sprites/collition_sprite/collition_sprite.yy",},},
     {"id":{"name":"credits_button_sprite","path":"sprites/credits_button_sprite/credits_button_sprite.yy",},},
     {"id":{"name":"fight_button","path":"sprites/fight_button/fight_button.yy",},},
+    {"id":{"name":"fryventure_map_sprite","path":"sprites/fryventure_map_sprite/fryventure_map_sprite.yy",},},
     {"id":{"name":"grass_sprite","path":"sprites/grass_sprite/grass_sprite.yy",},},
     {"id":{"name":"lechonkfanclub_logo_sprite","path":"sprites/lechonkfanclub_logo_sprite/lechonkfanclub_logo_sprite.yy",},},
     {"id":{"name":"lines_sprite","path":"sprites/lines_sprite/lines_sprite.yy",},},
@@ -130,6 +132,7 @@
     {"roomId":{"name":"CharacterSelect","path":"rooms/CharacterSelect/CharacterSelect.yy",},},
     {"roomId":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
     {"roomId":{"name":"Deathscreen","path":"rooms/Deathscreen/Deathscreen.yy",},},
+    {"roomId":{"name":"FryVentureRoom","path":"rooms/FryVentureRoom/FryVentureRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
