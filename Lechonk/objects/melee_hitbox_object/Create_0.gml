@@ -1,3 +1,4 @@
+bullet_id = -1
 speed = 10;
 knockback_power = 20;
 knockback_multiplier_increase = 0.04;
