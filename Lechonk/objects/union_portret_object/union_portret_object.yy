@@ -11,8 +11,8 @@
   "name":"union_portret_object",
   "overriddenProperties":[],
   "parent":{
-    "name":"screens",
-    "path":"folders/Objects/screens.yy",
+    "name":"select screens",
+    "path":"folders/Objects/screens/select screens.yy",
   },
   "parentObjectId":null,
   "persistent":false,

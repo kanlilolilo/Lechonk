@@ -1,4 +1,4 @@
-function game_end_sequence() {
+function game_end_online_sequence() {
     // Get a reference to the online player object
     var player = online_player_object;
 
@@ -16,4 +16,8 @@ function game_end_sequence() {
     alarm[0] = 300
 	
 	player.knockback_multiplier = 1;
+}
+
+function game_end_sequence() {
+	room_goto(Deathscreen);
 }

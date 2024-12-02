@@ -11,8 +11,8 @@ position_lerp_speed = 0.2; // Speed of smooth position movement (adjust as neede
 
 // Calculate the total width of the characters to center them
 total_width = array_length(characters) * offset;
-startX = display_get_width() / 2; // Center the characters
-startY = display_get_height() / 2; // Vertical center of the screen
+startX = display_get_width() / 1.6; // Center the characters
+startY = display_get_height() / 1.5; // Vertical center of the screen
 
 // Set up the positions for smooth movement
 lerped_positions = array_create(array_length(characters), 0);
