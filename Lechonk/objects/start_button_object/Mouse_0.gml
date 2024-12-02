@@ -1,1 +1,1 @@
-TransitionStart(CharacterSelect, sq_fade_out, sq_fade_in)
+TransitionStart(TestRoom_1, sq_fade_out, sq_fade_in)

@@ -1,0 +1,1 @@
+global.has_created_character = false;
