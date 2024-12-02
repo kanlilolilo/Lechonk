@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script2",
+  "%Name":"endgamesequences",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script2",
+  "name":"endgamesequences",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
