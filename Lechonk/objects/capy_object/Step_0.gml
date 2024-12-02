@@ -140,26 +140,32 @@ if (is_knocked_back) {
     }
 }
 
-if (y > room_height + 100) { // If the player falls below the map
-    game_end_sequence(); // Call a script to handle the victory
+if (y > room_height + 100) {
+    game_end_sequence();
 }
-// Change sprite based on movement state
+
 if (_key_down) {
-    // Change to down sprite if the down key is pressed
     sprite_index = capy_down_sprite;
 } else if (vsp < 0) {
-    // Moving upwards
     sprite_index = capy_jump_sprite;
-    image_index = 0; // Set to first frame of the jump sprite
+    image_index = 0;
 } else if (vsp > 0) {
     // Moving downwards
     sprite_index = capy_jump_sprite;
-    image_index = 1; // Set to second frame of the jump sprite
+    image_index = 1;
 } else if (_key_left || _key_right) {
-    // Moving horizontally on the ground
     sprite_index = capy_walk_sprite;
 } else {
-    // Idle on the ground
     sprite_index = capy_idle_sprite;
 }
 
+//idle animation
+if (vsp == 0 && hsp == 0) {
+    if (inactive_timer < 5 * room_speed) {
+        inactive_timer++;
+    } else {
+        sprite_index = capy_idle_throw_sprite;
+    }
+} else {
+    inactive_timer = 0;
+}
