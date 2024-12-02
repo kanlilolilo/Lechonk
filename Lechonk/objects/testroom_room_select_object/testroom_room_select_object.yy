@@ -30,9 +30,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"new_map",
-    "path":"sprites/new_map/new_map.yy",
+    "name":"new_map_icon_sprite",
+    "path":"sprites/new_map_icon_sprite/new_map_icon_sprite.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

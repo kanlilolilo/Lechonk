@@ -1,7 +1,7 @@
 // Step event: Handle input for character selection and "Enter" press
 
 // Check for the "Enter" key press to select a character
-if (keyboard_check_pressed(vk_enter)) {
+if (keyboard_check_pressed(vk_space)) {
     // Check which character is currently selected based on the current index
     var selected_character = characters[current_index];
     
@@ -57,7 +57,7 @@ if (keyboard_check_pressed(vk_enter)) {
 // Step event: Handle smooth character movement and animations
 if (animation_timer <= 0) {  // Only allow input if animation is done
     // Handle movement of the selection with arrow keys
-    if (keyboard_check(vk_right)) {
+    if (keyboard_check(ord("D"))) {
         current_index += 1;  // Move to the next character
         if (current_index >= array_length_1d(characters)) {
             current_index = 0;  // Loop back to the first character
@@ -66,7 +66,7 @@ if (animation_timer <= 0) {  // Only allow input if animation is done
         animation_timer = 1;  // Start the animation
     }
 
-    if (keyboard_check(vk_left)) {
+    if (keyboard_check(ord("A"))) {
         current_index -= 1;  // Move to the previous character
         if (current_index < 0) {
             current_index = array_length_1d(characters) - 1;  // Loop to the last character
