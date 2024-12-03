@@ -46,6 +46,9 @@ if (animation_timer <= 0) {  // Only allow input if animation is done
 for (var i = 0; i < array_length(characters); i++) {
     var target_position = startX + (i - current_index) * offset;
     lerped_positions[i] = lerp(lerped_positions[i], target_position, position_lerp_speed); // Smooth position transition
+	
+	var target_scale = (i == current_index) ? selection_scale : normal_scale;
+    lerped_scales[i] = lerp(lerped_scales[i], target_scale, position_lerp_speed);
 }
 
 // Decrease the animation timer until it finishes
