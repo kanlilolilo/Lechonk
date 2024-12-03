@@ -161,7 +161,6 @@
     {"roomId":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
     {"roomId":{"name":"FryVentureRoom","path":"rooms/FryVentureRoom/FryVentureRoom.yy",},},
     {"roomId":{"name":"Deathscreen","path":"rooms/Deathscreen/Deathscreen.yy",},},
-    {"roomId":{"name":"MultiplayerRoom","path":"rooms/MultiplayerRoom/MultiplayerRoom.yy",},},
     {"roomId":{"name":"GamemodeSelect","path":"rooms/GamemodeSelect/GamemodeSelect.yy",},},
     {"roomId":{"name":"RoomSelect","path":"rooms/RoomSelect/RoomSelect.yy",},},
     {"roomId":{"name":"MultiplayerRoom_1","path":"rooms/MultiplayerRoom_1/MultiplayerRoom_1.yy",},},
