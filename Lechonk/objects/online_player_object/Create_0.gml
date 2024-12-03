@@ -1,9 +1,17 @@
 character = 1;
+character_name = "shylily"
 key_pressed = 0;
 depth = -10;
 start_timer = false
 alarm[0] = 300
+can_jump = true
+can_jump2 = true
+jump_timer = 0; // Timer to delay the double jump
 
+knockback_power = 20;
+knockback_multiplier_increase = 0.04;
+
+can_double_jump = false;
 hsp = 0;
 vsp = 0;
 grv = 0.5;
