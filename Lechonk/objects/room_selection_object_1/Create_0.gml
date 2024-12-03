@@ -16,6 +16,7 @@ startY = display_get_height() / 2; // Vertical center of the screen
 
 // Set up the positions for smooth movement
 lerped_positions = array_create(array_length(characters), 0);
+lerped_scales = array_create(array_length(characters), normal_scale);
 
 // Initialize animation state
 animation_timer = 0; // Timer for controlling animation state

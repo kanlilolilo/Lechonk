@@ -3,7 +3,7 @@ for (var i = 0; i < array_length(characters); i++) {
     var char_x = lerped_positions[i];  // Use the smooth position
 
     // Set scale based on whether the character is selected
-    var scale = (i == current_index) ? selection_scale : normal_scale;  // Make the selected character bigger
+   var scale = lerped_scales[i];
     
     // The current character object (Capy, Shylily, Union)
     var character = characters[i];
