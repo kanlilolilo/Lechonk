@@ -1,0 +1,1 @@
+TransitionStart(MultiplayerRoom, sq_fade_out, sq_fade_in);
