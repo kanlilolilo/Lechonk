@@ -120,6 +120,7 @@
     {"id":{"name":"fryventure_map_icon_sprite","path":"sprites/fryventure_map_icon_sprite/fryventure_map_icon_sprite.yy",},},
     {"id":{"name":"fryventure_map_sprite","path":"sprites/fryventure_map_sprite/fryventure_map_sprite.yy",},},
     {"id":{"name":"grass_sprite","path":"sprites/grass_sprite/grass_sprite.yy",},},
+    {"id":{"name":"knockback_bar_sprite","path":"sprites/knockback_bar_sprite/knockback_bar_sprite.yy",},},
     {"id":{"name":"lechonkfanclub_logo_sprite","path":"sprites/lechonkfanclub_logo_sprite/lechonkfanclub_logo_sprite.yy",},},
     {"id":{"name":"lines_sprite","path":"sprites/lines_sprite/lines_sprite.yy",},},
     {"id":{"name":"logo_2_gif_sprite","path":"sprites/logo_2_gif_sprite/logo_2_gif_sprite.yy",},},
