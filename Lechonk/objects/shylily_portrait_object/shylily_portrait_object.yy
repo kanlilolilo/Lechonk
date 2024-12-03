@@ -1,14 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"union_portret_object",
+  "%Name":"shylily_portrait_object",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"union_portret_object",
+  "name":"shylily_portrait_object",
   "overriddenProperties":[],
   "parent":{
     "name":"select screens",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"union_portret",
-    "path":"sprites/union_portret/union_portret.yy",
+    "name":"shylily_portrait_sprite",
+    "path":"sprites/shylily_portrait_sprite/shylily_portrait_sprite.yy",
   },
   "spriteMaskId":null,
   "visible":false,

@@ -1,4 +1,14 @@
-characters = [capy_portret_object, shylily_portret_object, union_portret_object];
+characters = [
+	capy_portrait_object, 
+	shylily_portrait_object, 
+	union_portrait_object,
+	blank_portrait_object,
+	blank_portrait_object,
+	blank_portrait_object,
+	blank_portrait_object,
+	blank_portrait_object,
+	blank_portrait_object,
+];
 
 current_index = 0;
 normal_scale = 2;

@@ -9,14 +9,14 @@ for (var i = 0; i < array_length(characters); i++) {
     var character = characters[i];
 
     // Use the object’s sprite and draw it manually
-    if (character == capy_portret_object) {
-        draw_sprite(capy_portret, 0, char_x, startY);  // Replace `capy_portret` with the correct sprite name
+    if (character == capy_portrait_object) {
+        draw_sprite(capy_portrait_sprite, 0, char_x, startY);  // Replace `capy_portret` with the correct sprite name
     }
-    else if (character == shylily_portret_object) {
-        draw_sprite(shylily_portret, 0, char_x, startY);  // Replace `shylily_portret` with the correct sprite name
+    else if (character == shylily_portrait_object) {
+        draw_sprite(shylily_portrait_sprite, 0, char_x, startY);  // Replace `shylily_portret` with the correct sprite name
     }
-    else if (character == union_portret_object) {
-        draw_sprite(union_portret, 0, char_x, startY);  // Replace `union_portret` with the correct sprite name
+    else if (character == union_portrait_object) {
+        draw_sprite(union_portrait_sprite, 0, char_x, startY);  // Replace `union_portret` with the correct sprite name
     }
     
     // Apply the smooth scaling factor for resizing

@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"shylily_portret_object",
+  "%Name":"capy_portrait_object",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,7 +8,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"shylily_portret_object",
+  "name":"capy_portrait_object",
   "overriddenProperties":[],
   "parent":{
     "name":"select screens",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"shylily_portret",
-    "path":"sprites/shylily_portret/shylily_portret.yy",
+    "name":"capy_portrait_sprite",
+    "path":"sprites/capy_portrait_sprite/capy_portrait_sprite.yy",
   },
   "spriteMaskId":null,
   "visible":false,

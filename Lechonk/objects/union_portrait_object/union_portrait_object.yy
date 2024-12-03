@@ -1,13 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"waltuh_object",
+  "%Name":"union_portrait_object",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"waltuh_object",
+  "name":"union_portrait_object",
   "overriddenProperties":[],
   "parent":{
     "name":"select screens",
@@ -32,9 +33,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"portret_black",
-    "path":"sprites/portret_black/portret_black.yy",
+    "name":"union_portrait_sprite",
+    "path":"sprites/union_portrait_sprite/union_portrait_sprite.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

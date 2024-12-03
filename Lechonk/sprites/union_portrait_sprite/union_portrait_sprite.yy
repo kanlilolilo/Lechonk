@@ -1,27 +1,27 @@
 {
   "$GMSprite":"",
-  "%Name":"capy_portret",
+  "%Name":"union_portrait_sprite",
   "bboxMode":0,
-  "bbox_bottom":114,
+  "bbox_bottom":112,
   "bbox_left":1,
   "bbox_right":120,
-  "bbox_top":5,
+  "bbox_top":3,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9a830084-c507-41a6-963c-1fe484f9fb82","name":"9a830084-c507-41a6-963c-1fe484f9fb82","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"d27bc788-5708-4382-b99e-8fc10eb9ea7c","name":"d27bc788-5708-4382-b99e-8fc10eb9ea7c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":116,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"9bc41da6-c220-4074-8fa5-28ed8dade1b0","blendMode":0,"displayName":"default","isLocked":false,"name":"9bc41da6-c220-4074-8fa5-28ed8dade1b0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"890d7e7e-3e4b-4d35-bc46-35af3d1a6445","blendMode":0,"displayName":"default","isLocked":false,"name":"890d7e7e-3e4b-4d35-bc46-35af3d1a6445","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"capy_portret",
+  "name":"union_portrait_sprite",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"capy_portret",
+    "%Name":"union_portrait_sprite",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"capy_portret",
+    "name":"union_portrait_sprite",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9a830084-c507-41a6-963c-1fe484f9fb82","path":"sprites/capy_portret/capy_portret.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"eba1855f-6920-4061-9f8a-65fbed358876","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d27bc788-5708-4382-b99e-8fc10eb9ea7c","path":"sprites/union_portrait_sprite/union_portrait_sprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2b05d08e-c51e-48ef-a6de-6400b1a08e83","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

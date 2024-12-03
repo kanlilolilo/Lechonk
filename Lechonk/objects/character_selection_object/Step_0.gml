@@ -2,13 +2,13 @@ if (keyboard_check_pressed(vk_space)) {
     var selected_character = characters[current_index];
     
     switch (selected_character) {
-        case capy_portret_object:
+        case capy_portrait_object:
             audio_play_sound(capy, 0, false);
             break;
-        case shylily_portret_object:
+        case shylily_portrait_object:
             audio_play_sound(shy, 0, false);
             break;
-        case union_portret_object:
+        case union_portrait_object:
             audio_play_sound(soviet, 0, false);
             break;
     }
@@ -16,13 +16,13 @@ if (keyboard_check_pressed(vk_space)) {
     switch (global.selection_turn) {
         case 1:
             switch (selected_character) {
-                case capy_portret_object:
+                case capy_portrait_object:
                     global.p1_selected_character = capy_object;
                     break;
-                case shylily_portret_object:
+                case shylily_portrait_object:
                     global.p1_selected_character = shylily_idle_object;
                     break;
-                case union_portret_object:
+                case union_portrait_object:
                     global.p1_selected_character = soviet_union_object;
                     break;
             }
@@ -31,13 +31,13 @@ if (keyboard_check_pressed(vk_space)) {
         
         case 2:
             switch (selected_character) {
-                case capy_portret_object:
+                case capy_portrait_object:
                     global.p2_selected_character = capy_object;
                     break;
-                case shylily_portret_object:
+                case shylily_portrait_object:
                     global.p2_selected_character = shylily_idle_object;
                     break;
-                case union_portret_object:
+                case union_portrait_object:
                     global.p2_selected_character = soviet_union_object;
                     break;
             }
