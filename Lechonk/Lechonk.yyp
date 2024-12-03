@@ -86,7 +86,7 @@
     {"id":{"name":"FryVentureRoom","path":"rooms/FryVentureRoom/FryVentureRoom.yy",},},
     {"id":{"name":"GamemodeSelect","path":"rooms/GamemodeSelect/GamemodeSelect.yy",},},
     {"id":{"name":"IntroScreen","path":"rooms/IntroScreen/IntroScreen.yy",},},
-    {"id":{"name":"MultiplayerRoom","path":"rooms/MultiplayerRoom/MultiplayerRoom.yy",},},
+    {"id":{"name":"MultiplayerRoom_1","path":"rooms/MultiplayerRoom_1/MultiplayerRoom_1.yy",},},
     {"id":{"name":"RoomSelect","path":"rooms/RoomSelect/RoomSelect.yy",},},
     {"id":{"name":"StartScreen","path":"rooms/StartScreen/StartScreen.yy",},},
     {"id":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
@@ -155,8 +155,6 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"IntroScreen","path":"rooms/IntroScreen/IntroScreen.yy",},},
-    {"roomId":{"name":"TestRoom_1","path":"rooms/TestRoom_1/TestRoom_1.yy",},},
-    {"roomId":{"name":"MultiplayerRoom","path":"rooms/MultiplayerRoom/MultiplayerRoom.yy",},},
     {"roomId":{"name":"TitleScreen","path":"rooms/TitleScreen/TitleScreen.yy",},},
     {"roomId":{"name":"StartScreen","path":"rooms/StartScreen/StartScreen.yy",},},
     {"roomId":{"name":"CharacterSelect","path":"rooms/CharacterSelect/CharacterSelect.yy",},},
@@ -164,6 +162,9 @@
     {"roomId":{"name":"FryVentureRoom","path":"rooms/FryVentureRoom/FryVentureRoom.yy",},},
     {"roomId":{"name":"Deathscreen","path":"rooms/Deathscreen/Deathscreen.yy",},},
     {"roomId":{"name":"MultiplayerRoom","path":"rooms/MultiplayerRoom/MultiplayerRoom.yy",},},
+    {"roomId":{"name":"GamemodeSelect","path":"rooms/GamemodeSelect/GamemodeSelect.yy",},},
+    {"roomId":{"name":"RoomSelect","path":"rooms/RoomSelect/RoomSelect.yy",},},
+    {"roomId":{"name":"MultiplayerRoom_1","path":"rooms/MultiplayerRoom_1/MultiplayerRoom_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
