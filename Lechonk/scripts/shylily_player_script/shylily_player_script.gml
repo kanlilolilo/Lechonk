@@ -152,6 +152,11 @@ function shylily_draw(){
 	} else {
 	    draw_set_color(c_green);  // Green color when it's cool
 	}
+	
+	if (minigun_heat = 0){
+		var outer_radius = 0; // Outer radius of the donut
+		var inner_radius = 0;  // Inner radius of the donut
+	}
 
 	// Draw the actual donut-shaped heat bar
 	for (var angle = 0; angle <= current_angle; angle++) {
