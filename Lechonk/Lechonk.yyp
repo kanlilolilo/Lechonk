@@ -96,6 +96,8 @@
     {"id":{"name":"capy_player_script","path":"scripts/capy_player_script/capy_player_script.yy",},},
     {"id":{"name":"endgamesequences","path":"scripts/endgamesequences/endgamesequences.yy",},},
     {"id":{"name":"movement_collision","path":"scripts/movement_collision/movement_collision.yy",},},
+    {"id":{"name":"shylily_player_script","path":"scripts/shylily_player_script/shylily_player_script.yy",},},
+    {"id":{"name":"soviet_player_script","path":"scripts/soviet_player_script/soviet_player_script.yy",},},
     {"id":{"name":"transitions","path":"scripts/transitions/transitions.yy",},},
     {"id":{"name":"sq_fade_in","path":"sequences/sq_fade_in/sq_fade_in.yy",},},
     {"id":{"name":"sq_fade_out","path":"sequences/sq_fade_out/sq_fade_out.yy",},},
