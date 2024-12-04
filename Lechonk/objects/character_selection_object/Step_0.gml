@@ -11,6 +11,8 @@ if (keyboard_check_pressed(vk_space)) {
         case union_portrait_object:
             audio_play_sound(soviet, 0, false);
             break;
+		case mawmaw_idle_object:
+			break;
     }
 
     switch (global.selection_turn) {
@@ -25,6 +27,9 @@ if (keyboard_check_pressed(vk_space)) {
                 case union_portrait_object:
                     global.p1_selected_character = soviet_union_object;
                     break;
+				case mawmaw_portrait_object:
+					global.p1_selected_character = mawmaw_idle_object;
+					break;
             }
             global.selection_turn = 2;
             break;
@@ -40,6 +45,9 @@ if (keyboard_check_pressed(vk_space)) {
                 case union_portrait_object:
                     global.p2_selected_character = soviet_union_object;
                     break;
+				case mawmaw_portrait_object:
+					global.p2_selected_character = mawmaw_idle_object;
+					break;
             }
             global.selection_turn = 1;
             break;

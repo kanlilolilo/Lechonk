@@ -61,6 +61,8 @@
     {"id":{"name":"hahajebentdood","path":"objects/hahajebentdood/hahajebentdood.yy",},},
     {"id":{"name":"intro_object","path":"objects/intro_object/intro_object.yy",},},
     {"id":{"name":"logo_2_object","path":"objects/logo_2_object/logo_2_object.yy",},},
+    {"id":{"name":"mawmaw_idle_object","path":"objects/mawmaw_idle_object/mawmaw_idle_object.yy",},},
+    {"id":{"name":"mawmaw_portrait_object","path":"objects/mawmaw_portrait_object/mawmaw_portrait_object.yy",},},
     {"id":{"name":"melee_hitbox_object","path":"objects/melee_hitbox_object/melee_hitbox_object.yy",},},
     {"id":{"name":"multiplayer_gamemode_select_1","path":"objects/multiplayer_gamemode_select_1/multiplayer_gamemode_select_1.yy",},},
     {"id":{"name":"multiplayer","path":"objects/multiplayer/multiplayer.yy",},},

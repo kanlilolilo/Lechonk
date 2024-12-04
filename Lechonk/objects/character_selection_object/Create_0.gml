@@ -2,6 +2,7 @@ characters = [
 	capy_portrait_object, 
 	shylily_portrait_object, 
 	union_portrait_object,
+	mawmaw_portrait_object,
 	blank_portrait_object,
 	blank_portrait_object,
 	blank_portrait_object,
