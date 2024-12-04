@@ -26,3 +26,7 @@ if (global._key_left) {
 }
 
 capy_player();
+
+if (y > room_height + 100) { // If the player falls below the map
+	game_end_sequence(); // Call a script to handle the victory
+}

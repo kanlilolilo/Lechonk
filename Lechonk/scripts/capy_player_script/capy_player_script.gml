@@ -21,11 +21,6 @@ function capy_stats(){
 	dash_timer = 10;
 
 	inactive_timer = 0;
-
-	// Check if the player falls outside the map
-	if (y > room_height + 100) { // If the player falls below the map
-	    game_end_sequence(); // Call a script to handle the victory
-	}
 }
 
 function capy_player(){

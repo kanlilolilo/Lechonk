@@ -91,10 +91,6 @@ function shylily_player(){
 	        is_knocked_back = false;  // End knockback state
 	    }
 	}
-
-	if (y > room_height + 100) { // If the player falls below the map
-	    game_end_sequence(); // Call a script to handle the victory
-	}
 }
 
 function shylily_draw(){
