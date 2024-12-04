@@ -21,6 +21,13 @@ function shylily_stats(){
 }
 
 function shylily_player(){
+	// Handle sprite flipping based on movement direction
+	if (global._key_left) {
+	    image_xscale = -1; // Mirror sprite when moving left
+	} else if (global._key_right) {
+	    image_xscale = 1; // Reset to original when moving right
+	}
+	
 	// Fire bullets based on direction and check if the minigun is overheated
 	if (global._key_throw && minigun_heat < max_heat) { // Fire when F is pressed and not overheated
 	    if (fire_timer <= 0) {

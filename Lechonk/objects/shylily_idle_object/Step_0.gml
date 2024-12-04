@@ -12,11 +12,10 @@ if (global.p2_selected_character != shylily_idle_object) {
 
 movement_collision();
 
-// Handle sprite flipping based on movement direction
-if (global._key_left) {
-    image_xscale = -1; // Mirror sprite when moving left
-} else if (global._key_right) {
-    image_xscale = 1; // Reset to original when moving right
+if (global._key_left || global._key_right) {
+    sprite_index = shylily_walk_sprite;
+} else {
+    sprite_index = shylily_idle_sprite;
 }
 
 shylily_player();
