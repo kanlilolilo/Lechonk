@@ -134,6 +134,7 @@
     {"id":{"name":"map_test_sprite","path":"sprites/map_test_sprite/map_test_sprite.yy",},},
     {"id":{"name":"mawmaw_attack_sprite","path":"sprites/mawmaw_attack_sprite/mawmaw_attack_sprite.yy",},},
     {"id":{"name":"mawmaw_idle_sprite","path":"sprites/mawmaw_idle_sprite/mawmaw_idle_sprite.yy",},},
+    {"id":{"name":"mawmaw_portrait_sprite","path":"sprites/mawmaw_portrait_sprite/mawmaw_portrait_sprite.yy",},},
     {"id":{"name":"mawmaw_spin_sprite","path":"sprites/mawmaw_spin_sprite/mawmaw_spin_sprite.yy",},},
     {"id":{"name":"mawmaw_walk_sprite","path":"sprites/mawmaw_walk_sprite/mawmaw_walk_sprite.yy",},},
     {"id":{"name":"new_map_icon_sprite","path":"sprites/new_map_icon_sprite/new_map_icon_sprite.yy",},},

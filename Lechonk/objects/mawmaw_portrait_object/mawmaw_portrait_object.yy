@@ -30,9 +30,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"mawmaw_idle_sprite",
-    "path":"sprites/mawmaw_idle_sprite/mawmaw_idle_sprite.yy",
+    "name":"mawmaw_portrait_sprite",
+    "path":"sprites/mawmaw_portrait_sprite/mawmaw_portrait_sprite.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
