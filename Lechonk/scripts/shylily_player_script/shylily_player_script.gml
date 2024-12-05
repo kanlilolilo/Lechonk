@@ -28,6 +28,12 @@ function shylily_player(){
 	    image_xscale = 1; // Reset to original when moving right
 	}
 	
+	if (global._key_left || global._key_right) {
+	    sprite_index = shylily_walk_sprite;
+	} else {
+	    sprite_index = shylily_idle_sprite;
+	}
+	
 	// Fire bullets based on direction and check if the minigun is overheated
 	if (global._key_throw && minigun_heat < max_heat) { // Fire when F is pressed and not overheated
 	    if (fire_timer <= 0) {

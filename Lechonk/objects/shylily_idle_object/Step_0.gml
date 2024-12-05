@@ -12,12 +12,6 @@ if (global.p2_selected_character != shylily_idle_object) {
 
 movement_collision();
 
-if (global._key_left || global._key_right) {
-    sprite_index = shylily_walk_sprite;
-} else {
-    sprite_index = shylily_idle_sprite;
-}
-
 shylily_player();
 
 if (y > room_height + 100) { // If the player falls below the map

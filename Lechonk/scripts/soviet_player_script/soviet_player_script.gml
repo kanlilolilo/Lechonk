@@ -31,6 +31,13 @@ function soviet_player(){
 	    image_xscale = 0.2; // Reset to original when moving right
 	}
 	
+	// Change sprite to walking sprite when moving, or idle when not
+	if (global._key_left || global._key_right) {
+	    sprite_index = soviet_union_walk_sprite;
+	} else {
+	    sprite_index = soviet_union_sprite;
+	}
+	
 		// Fire bullets based on direction
 	if (global._key_throw) { // Fire when Space is held down
 	    if (fire_timer <= 0) {

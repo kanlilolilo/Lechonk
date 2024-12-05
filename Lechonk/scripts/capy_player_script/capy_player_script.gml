@@ -69,11 +69,6 @@ function capy_player(){
 	    }
 	}
 
-	// Check if the player falls out of bounds
-	if (y > room_height + 100) {
-	    game_end_sequence();
-	}
-
 	// Handle sprite states
 	if (global._key_down) {
 	    sprite_index = capy_down_sprite;

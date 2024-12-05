@@ -12,13 +12,6 @@ if (global.p2_selected_character != soviet_union_object) {
 
 movement_collision();
 
-// Change sprite to walking sprite when moving, or idle when not
-if (global._key_left || global._key_right) {
-    sprite_index = soviet_union_walk_sprite;
-} else {
-    sprite_index = soviet_union_sprite;
-}
-
 soviet_player()
 
 if (y > room_height + 100) { // If the player falls below the map
