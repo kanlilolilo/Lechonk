@@ -1,6 +1,8 @@
 // Always reapply knockback velocities
 
-
+if(speed < 0) {
+	knockback_power = knockback_power * -1
+}
 
 other.knockback_x = (knockback_power * cos(direction)) * bullet_direction;  // Horizontal knockback
 other.knockback_y = knockback_power * -0.4;  // Vertical knockback (upward)
