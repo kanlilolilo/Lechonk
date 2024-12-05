@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
   "%Name":"capy_walk_sprite",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":31,
-  "bbox_left":3,
-  "bbox_right":30,
+  "bbox_left":2,
+  "bbox_right":29,
   "bbox_top":2,
   "collisionKind":1,
   "collisionTolerance":0,

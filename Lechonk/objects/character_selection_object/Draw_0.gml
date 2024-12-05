@@ -13,7 +13,7 @@ for (var i = 0; i < array_length(characters); i++) {
         draw_sprite(union_portrait_sprite, 0, char_x, startY);
     }
 	else if (character == mawmaw_portrait_object) {
-		draw_sprite(mawmaw_idle_sprite, 0, char_x, startY);
+		draw_sprite(mawmaw_portrait_sprite, 0, char_x, startY);
 	}
     
     draw_sprite_ext(character.sprite_index, 0, char_x, startY, scale, scale, 0, c_white, 1);
