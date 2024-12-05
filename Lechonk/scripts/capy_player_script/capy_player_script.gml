@@ -31,6 +31,7 @@ function capy_player(){
 	        var bullet = instance_create_layer(x, y, "Instances", melee_hitbox_object);
 
 	        // Set bullet speed and direction
+			bullet.bullet_id = player_id
 	        bullet.speed = last_direction * 10;
 	        bullet.bullet_direction = last_direction;
 

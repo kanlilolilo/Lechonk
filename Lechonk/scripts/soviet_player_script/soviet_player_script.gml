@@ -45,6 +45,7 @@ function soviet_player(){
 	        var bullet = instance_create_layer(x, y, "Instances", vork_object);
 
 	        // Set bullet speed based on last_direction
+			bullet.bullet_id = player_id
 	        bullet.speed = last_direction * 10;
 			bullet.bullet_direction = last_direction
 
