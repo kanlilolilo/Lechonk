@@ -8,6 +8,12 @@ can_jump = true
 can_jump2 = true
 jump_timer = 0; // Timer to delay the double jump
 
+is_following = false;
+input_disabled = false;
+attack_cooldown = 0
+attack_duration = 0
+mawmaw_full = false
+
 knockback_power = 20;
 knockback_multiplier_increase = 0.04;
 

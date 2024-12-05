@@ -1,4 +1,5 @@
-	// Input 
+	// Input
+	if (!input_disabled) {
 	var _input = rollback_get_input();
 
 	var _key_left = _input.a
@@ -379,29 +380,50 @@
 	
 	if (character_name = "mawmaw") {
 		
-		// Change sprite to walking sprite when moving, or idle when not
-		if (!_key_throw) {
-			if (_key_left || _key_right) {
-			    sprite_index = mawmaw_walk_sprite;
-			} else {
-			    sprite_index = mawmaw_idle_sprite;
+		// Change sprite to walking sprite when moving, or idle when not{
+		if (_key_left || _key_right) {
+			sprite_index = mawmaw_walk_sprite;
+		} else {
+			sprite_index = mawmaw_idle_sprite;
+		}		
+		
+		if (mawmaw_full) {
+			image_yscale = 0.3
+			if (_key_left) {
+			    image_xscale = 0.3; // Mirror sprite when moving left
+			} else if (_key_right) {
+			    image_xscale = -0.3; // Reset to original when moving right
 			}
 		} else {
+			image_yscale = 0.2
+			// Handle sprite flipping based on movement direction
+			if (_key_left) {
+			    image_xscale = 0.2; // Mirror sprite when moving left
+			} else if (_key_right) {
+			    image_xscale = -0.2; // Reset to original when moving right
+			}
+		}
+
+
+
+		// Attack logic
+		if (_key_throw && attack_cooldown <= 0 && !mawmaw_attacking) {
+		    mawmaw_attacking = true;          // Start attacking
+		    attack_duration = 180;           // 3 seconds at 60 FPS
+		    attack_cooldown = 300;           // Cooldown of 5 seconds after the attack
+		}
+
+		if (mawmaw_attacking) {
 			sprite_index = mawmaw_attack_sprite;
+		    attack_duration -= 1;            // Decrease attack duration
+
+		    if (attack_duration <= 0) {
+		        mawmaw_attacking = false;    // Stop attacking when duration ends
+		    }
 		}
 
-		// Handle sprite flipping based on movement direction
-		if (_key_left) {
-		    image_xscale = 0.2; // Mirror sprite when moving left
-		} else if (_key_right) {
-		    image_xscale = -0.2; // Reset to original when moving right
-		}
-
-
-		if (_key_throw) { // Fire when the attack button is held down
-			mawmaw_attacking = true;
-		} else {
-			mawmaw_attacking = false;
+		if (attack_cooldown > 0) {
+		    attack_cooldown -= 1;            // Decrease cooldown timer
 		}
 
 		// If the dash timer is active, stop moving after dash duration
@@ -419,4 +441,4 @@
 	
 	
 	}
-	
+	}
