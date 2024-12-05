@@ -100,15 +100,23 @@ function shylily_player(){
 }
 
 function shylily_draw(){
-	// Draw the character sprite first
+	
 	draw_self();
-
-	// Then draw the knockback multiplier bar
-	if (global.p2_selected_character != shylily_idle_object) {
-	    var bar_x = 80;
+	
+	if (global.has_created_character) {
+		if (player_id == 0) {
+			var bar_x = 1940;
+		} else {
+			var bar_x = 2740;
+		}
 	} else {
-	    var bar_x = room_width - 80;
+		if (global.p2_selected_character != shylily_idle_object) {
+		    var bar_x = 80;
+		} else {
+		    var bar_x = room_width - 80;
+		}
 	}
+	
 	var bar_y = 20;
 
 	// Determine the frame index for the knockback sprite
