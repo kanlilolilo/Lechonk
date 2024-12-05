@@ -1,6 +1,6 @@
 if (other.player_id != bullet_id && bullet_id != -1) {
     // Apply knockback
-    other.knockback_x = knockback_power * cos(direction);
+    other.knockback_x = knockback_power * z;
     other.knockback_y = knockback_power * -0.4;
     other.is_knocked_back = true;
     other.knockback_timer = 0;

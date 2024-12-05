@@ -21,6 +21,8 @@ function capy_stats(){
 	dash_timer = 10;
 
 	inactive_timer = 0;
+	image_xscale = 1;
+	image_yscale = 1;
 }
 
 function capy_player(){
@@ -31,7 +33,9 @@ function capy_player(){
 	        var bullet = instance_create_layer(x, y, "Instances", melee_hitbox_object);
 
 	        // Set bullet speed and direction
-			bullet.bullet_id = player_id
+			if (global.has_created_character) {
+				bullet.bullet_id = player_id
+			}
 	        bullet.speed = last_direction * 10;
 	        bullet.bullet_direction = last_direction;
 

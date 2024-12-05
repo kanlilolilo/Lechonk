@@ -18,6 +18,8 @@ function shylily_stats(){
 	max_heat = 100;    // Maximum heat before the minigun overheats
 	heat_per_shot = 2; // Amount of heat the minigun generates per shot
 	cool_down_rate = 0.5; // Rate at which the minigun cools down per step (when not firing)
+	image_xscale = 1;
+	image_yscale = 1;
 }
 
 function shylily_player(){
@@ -41,7 +43,9 @@ function shylily_player(){
 	        var bullet = instance_create_layer(x, y, "Instances", shylily_bullet_object);
 
 	        // Set bullet speed based on last_direction
-			bullet.bullet_id = player_id
+			if (global.has_created_character) {
+				bullet.bullet_id = player_id
+			}
 	        bullet.speed = last_direction * 10;
 	        bullet.bullet_direction = last_direction;
 
