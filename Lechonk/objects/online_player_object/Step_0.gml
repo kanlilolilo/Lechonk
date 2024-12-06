@@ -7,7 +7,7 @@
 	global._key_jump = global._input.w || global._input.up
 	global._key_down = global._input.s || global._input.down
 	global._key_throw = global._input.space || global._input.z
-	global._key_throw2 = global._input.c || global._input.x
+	global._key_throw_2 = global._input.c || global._input.x
 	global._key_rightswitch = global._input.right || global._input.d
 
 	if (global._key_rightswitch && start_timer == false) {
