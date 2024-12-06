@@ -1,19 +1,21 @@
-if (global.p2_selected_character != shylily_idle_object) {
-	global._key_left = keyboard_check(ord("A"));
-	global._key_right = keyboard_check(ord("D"));
-	global._key_jump = keyboard_check(ord("W"));
-	global._key_throw = keyboard_check(vk_shift);
-} else {
-	global._key_left = keyboard_check(vk_left);
-	global._key_right = keyboard_check(vk_right);
-	global._key_jump = keyboard_check(vk_up);
-	global._key_throw = keyboard_check(vk_control);
-}
+if (!input_disabled) {
+	if (global.p2_selected_character != shylily_idle_object) {
+		global._key_left = keyboard_check(ord("A"));
+		global._key_right = keyboard_check(ord("D"));
+		global._key_jump = keyboard_check(ord("W"));
+		global._key_throw = keyboard_check(vk_shift);
+	} else {
+		global._key_left = keyboard_check(vk_left);
+		global._key_right = keyboard_check(vk_right);
+		global._key_jump = keyboard_check(vk_up);
+		global._key_throw = keyboard_check(vk_control);
+	}
 
-movement_collision();
+	movement_collision();
 
-shylily_player();
+	shylily_player();
 
-if (y > room_height + 100) { // If the player falls below the map
-	game_end_sequence(); // Call a script to handle the victory
+	if (y > room_height + 100) { // If the player falls below the map
+		game_end_sequence(); // Call a script to handle the victory
+	}
 }

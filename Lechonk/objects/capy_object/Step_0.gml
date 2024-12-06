@@ -1,3 +1,4 @@
+if (!input_disabled) {
 if (global.p2_selected_character != capy_object) {
 global._key_left = keyboard_check(ord("A"));
 global._key_right = keyboard_check(ord("D"));
@@ -29,4 +30,5 @@ capy_player();
 
 if (y > room_height + 100) { // If the player falls below the map
 	game_end_sequence(); // Call a script to handle the victory
+}
 }
