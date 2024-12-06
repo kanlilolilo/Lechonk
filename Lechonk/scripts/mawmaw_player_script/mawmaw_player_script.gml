@@ -57,7 +57,7 @@ function mawmaw_player(){
 	}
 
 	if (mawmaw_full) {
-		walksp = 1.6
+		walksp = 2.4
 	} else {
 		walksp = 3.2
 	}
