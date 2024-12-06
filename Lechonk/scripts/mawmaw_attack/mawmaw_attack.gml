@@ -7,6 +7,8 @@ function mawmaw_attack(){
 	    other.follow_timer = 120; // Set a timer for 2 seconds (assuming 60 FPS)
 		mawmaw_attacking = false;
 		mawmaw_full = true
+		other.x = x;
+	    other.y = y;
 	}
 
 	// In the other player's Step Event
