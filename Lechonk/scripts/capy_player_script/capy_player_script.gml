@@ -1,4 +1,15 @@
-function capy_stats(){
+function capy_stats(){	
+	character_name = "capy"
+	
+	is_following = false;
+	input_disabled = false;
+	attack_cooldown = 0
+	attack_duration = 0
+	mawmaw_full = false
+	
+	knockback_power = 20;
+	knockback_multiplier_increase = 0.04;
+	
 	hsp = 0;
 	vsp = 0;
 	grv = 0.4;

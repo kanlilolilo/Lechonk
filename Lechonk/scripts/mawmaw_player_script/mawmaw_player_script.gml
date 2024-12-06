@@ -1,6 +1,10 @@
 function mawmaw_stats(){
 	character_name = "mawmaw";
 	
+	is_following = false;
+	input_disabled = false;
+	attack_duration = 0
+	
 	// Mawmaw stats
 	knockback_power = 20;
 	knockback_multiplier_increase = 0.04;
@@ -26,7 +30,7 @@ function mawmaw_stats(){
 	image_xscale = 0.2;
 	image_yscale = 0.2;
 }
-
+	
 function mawmaw_player(){
 	// Change sprite to walking sprite when moving, or idle when not{
 	if (global._key_left || global._key_right) {
