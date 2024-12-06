@@ -1,5 +1,4 @@
 function movement_collision() {
-
     // Resolve potential stuck states
     if (place_meeting(x, y, collision_object) && hsp == 0) {
         y -= 3; // Adjust upward to escape collision
@@ -53,4 +52,6 @@ function movement_collision() {
     } else if (global._key_right) {
         last_direction = 1;
     }
+	
+	
 }

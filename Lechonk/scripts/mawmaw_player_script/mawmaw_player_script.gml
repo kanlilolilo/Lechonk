@@ -81,6 +81,23 @@ function mawmaw_player(){
 	if (attack_cooldown > 0) {
 		attack_cooldown -= 1;            // Decrease cooldown timer
 	}
+	
+		if (is_knocked_back) {
+	    // Apply knockback to position
+	    x += knockback_x * knockback_multiplier;
+	    y += abs(knockback_y * knockback_multiplier) * -1;
+
+	    // Gradually reduce knockback velocity in the x-direction
+	    knockback_x *= 0.9;
+	    knockback_y *= 0.9;
+
+	    // Stop knockback entirely when both x and y velocities are small
+	    if (abs(knockback_x) < 0.1 && abs(knockback_y) < 0.1) {
+	        knockback_x = 0;
+	        knockback_y = 0;  // Reset knockback_y
+	        is_knocked_back = false;  // End knockback state
+	    }
+	}
 }
 
 function mawmaw_draw(){
