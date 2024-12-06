@@ -26,13 +26,17 @@ function mawmaw_attack(){
 	        is_following = false; // Stop following
 
 	        // Apply knockback
-	        knockback_x = knockback_power * cos(direction);
-	        knockback_y = knockback_power * -0.4;
+			if(!other.last_direction) {
+				knockback_x = (other.knockback_power * cos(direction)) * -1;
+			} else {
+				knockback_x = other.knockback_power * cos(direction);
+			}
+	        knockback_y = other.knockback_power * -0.4;
 	        is_knocked_back = true;
 	        knockback_timer = 0;
 
 	        // Adjust knockback multiplier
-	        knockback_multiplier += knockback_multiplier_increase;
+	        knockback_multiplier += other.knockback_multiplier_increase;
 	    }
 	}
 }

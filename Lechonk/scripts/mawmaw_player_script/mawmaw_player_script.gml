@@ -7,7 +7,7 @@ function mawmaw_stats(){
 	
 	// Mawmaw stats
 	knockback_power = 20;
-	knockback_multiplier_increase = 0.04;
+	knockback_multiplier_increase = 0.1;
 	sprite_index = mawmaw_walk_sprite;
 	mawmaw_attacking = false;
 	mawmaw_full = false;
@@ -56,7 +56,11 @@ function mawmaw_player(){
 		}
 	}
 
-
+	if (mawmaw_full) {
+		walksp = 1.6
+	} else {
+		walksp = 3.2
+	}
 
 	// Attack logic
 	if (global._key_throw && attack_cooldown <= 0 && !mawmaw_attacking) {
@@ -76,15 +80,6 @@ function mawmaw_player(){
 
 	if (attack_cooldown > 0) {
 		attack_cooldown -= 1;            // Decrease cooldown timer
-	}
-
-	// If the dash timer is active, stop moving after dash duration
-	if (dash_timer > 0) {
-		dash_timer -= 1;
-		if (dash_timer <= 0) {
-		    hspeed = 0; // Stop horizontal movement after dash
-		    vspeed = 0; // Stop vertical movement after dash
-		}
 	}
 }
 
