@@ -4,7 +4,7 @@ global._key_right = keyboard_check(ord("D"));
 global._key_jump = keyboard_check(ord("W"));
 global._key_down = keyboard_check(ord("S"));
 global._key_throw = keyboard_check(ord("1"));
-global._key_throw2 = keyboard_check(ord("2"));
+global._key_throw_2 = keyboard_check(ord("2"));
 
 } else {
 global._key_left = keyboard_check(vk_left);
@@ -12,7 +12,7 @@ global._key_right = keyboard_check(vk_right);
 global._key_jump = keyboard_check(vk_up);
 global._key_down = keyboard_check(vk_down);
 global._key_throw = keyboard_check(191);
-global._key_throw = keyboard_check(190);
+global._key_throw_2 = keyboard_check(190);
 }
 
 movement_collision();
