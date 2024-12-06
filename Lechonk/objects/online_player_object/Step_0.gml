@@ -2,12 +2,13 @@
 	if (!input_disabled) {
 	global._input = rollback_get_input();
 
-	global._key_left = global._input.a
-	global._key_right = global._input.d 
-	global._key_jump = global._input.w;
-	global._key_down = global._input.s;
-	global._key_throw = global._input.space
-	global._key_rightswitch = global._input.right
+	global._key_left = global._input.a || global._input.left
+	global._key_right = global._input.d  || global._input.right
+	global._key_jump = global._input.w || global._input.up
+	global._key_down = global._input.s || global._input.down
+	global._key_throw = global._input.space || global._input.z
+	global._key_throw2 = global._input.space || global._input.x
+	global._key_rightswitch = global._input.right || global._input.d
 
 	if (global._key_rightswitch && start_timer == false) {
 		key_pressed = 1
