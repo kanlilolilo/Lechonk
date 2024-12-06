@@ -3,11 +3,11 @@ function mawmaw_stats(){
 	
 	is_following = false;
 	input_disabled = false;
-	attack_duration = 0
+	attack_duration = 0;
 	
 	// Mawmaw stats
 	knockback_power = 20;
-	knockback_multiplier_increase = 0.1;
+	knockback_multiplier_increase = 0.2;
 	sprite_index = mawmaw_walk_sprite;
 	mawmaw_attacking = false;
 	mawmaw_full = false;
@@ -57,7 +57,7 @@ function mawmaw_player(){
 	}
 
 	if (mawmaw_full) {
-		walksp = 2.4
+		walksp = 2
 	} else {
 		walksp = 3.2
 	}
@@ -71,6 +71,7 @@ function mawmaw_player(){
 
 	if (mawmaw_attacking) {
 		sprite_index = mawmaw_attack_sprite;
+		walksp = 5
 		attack_duration -= 1;            // Decrease attack duration
 
 		if (attack_duration <= 0) {
