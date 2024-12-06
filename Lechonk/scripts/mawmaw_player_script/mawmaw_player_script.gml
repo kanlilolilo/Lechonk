@@ -6,6 +6,9 @@ function mawmaw_stats(){
 	knockback_multiplier_increase = 0.04;
 	sprite_index = mawmaw_walk_sprite;
 	mawmaw_attacking = false;
+	mawmaw_full = false;
+	attack_cooldown = 0;
+	dash_timer = 0;
 	can_double_jump = true;
 	hsp = 0;
 	vsp = 0;
