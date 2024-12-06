@@ -23,6 +23,8 @@ function soviet_stats(){
 	vibration_offset = 0;
 	vibration_strength = 5; // The maximum displacement for the vibration (in pixels)
 	vibration_speed = 5;    // How fast the bar vibrates (higher value = faster vibration)
+	
+	is_attack_2 = false;
 
 	image_xscale = 0.2
 	image_yscale = 0.2

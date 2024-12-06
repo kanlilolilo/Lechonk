@@ -71,7 +71,7 @@ function mawmaw_player(){
 
 	if (mawmaw_attacking) {
 		sprite_index = mawmaw_attack_sprite;
-		walksp = 5
+		walksp = 5;
 		attack_duration -= 1;            // Decrease attack duration
 
 		if (attack_duration <= 0) {

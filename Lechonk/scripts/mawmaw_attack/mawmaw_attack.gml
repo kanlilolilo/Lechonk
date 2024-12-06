@@ -8,7 +8,7 @@ function mawmaw_attack(){
 		mawmaw_attacking = false;
 		mawmaw_full = true
 		other.x = x;
-	  other.y = y;
+		other.y = y;
 	}
 
 	// In the other player's Step Event
