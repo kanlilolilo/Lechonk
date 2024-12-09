@@ -2,7 +2,7 @@ function mawmaw_attack(){
 	if (character_name == "mawmaw" && mawmaw_attacking == true) {
 	    // Make the other player disappear and follow
 		other.input_disabled = true;
-	    other.visible = true; // Hide the other player
+	    other.visible = false; // Hide the other player
 	    other.is_following = true; // Add a flag for following
 	    other.follow_timer = 120; // Set a timer for 2 seconds (assuming 60 FPS)
 		mawmaw_attacking = false;

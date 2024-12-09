@@ -11,8 +11,8 @@
   "name":"soviet_union_object",
   "overriddenProperties":[],
   "parent":{
-    "name":"characters",
-    "path":"folders/Objects/characters.yy",
+    "name":"soviet",
+    "path":"folders/Objects/characters/soviet.yy",
   },
   "parentObjectId":null,
   "persistent":false,

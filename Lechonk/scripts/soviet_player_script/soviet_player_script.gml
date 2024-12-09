@@ -24,71 +24,91 @@ function soviet_stats(){
 	vibration_strength = 5; // The maximum displacement for the vibration (in pixels)
 	vibration_speed = 5;    // How fast the bar vibrates (higher value = faster vibration)
 	
-	is_attack_2 = false;
+	in_attack_2 = false;
 
 	image_xscale = 0.2
 	image_yscale = 0.2
 }
 
-function soviet_player(){
-	// Handle sprite flipping based on movement direction
-	if (global._key_left) {
-	    image_xscale = -0.2; // Mirror sprite when moving left
-	} else if (global._key_right) {
-	    image_xscale = 0.2; // Reset to original when moving right
-	}
-	
-	// Change sprite to walking sprite when moving, or idle when not
-	if (global._key_left || global._key_right) {
-	    sprite_index = soviet_union_walk_sprite;
-	} else {
-	    sprite_index = soviet_union_sprite;
-	}
-	
-		// Fire bullets based on direction
-	if (global._key_throw) { // Fire when Space is held down
-	    if (fire_timer <= 0) {
-	        // Create the bullet
-	        var bullet = instance_create_layer(x, y, "Instances", vork_object);
+function soviet_player() {
+    // Handle sprite flipping based on movement direction
+    if (global._key_left) {
+        image_xscale = -0.2; // Mirror sprite when moving left
+    } else if (global._key_right) {
+        image_xscale = 0.2; // Reset to original when moving right
+    }
 
-	        // Set bullet speed based on last_direction
-			if (global.has_created_character) {
-				bullet.bullet_id = player_id
-			}
-	        bullet.speed = last_direction * 10;
-			bullet.bullet_direction = last_direction
+    // Change sprite to walking sprite when moving, or idle when not
+    if (global._key_left || global._key_right) {
+        if (in_attack_2) {
+            sprite_index = soviet_union_walk_2_sprite; // Use walk_2 sprite when in attack mode 2
+        } else {
+            sprite_index = soviet_union_walk_sprite;
+        }
+    } else {
+        if (in_attack_2) {
+            sprite_index = soviet_union_2_sprite; // Use idle_2 sprite when in attack mode 2
+        } else {
+            sprite_index = soviet_union_sprite;
+        }
+    }
 
-	        // Reset fire timer
-	        fire_timer = fire_rate;
-	    }
-	}
+    // Fire bullets based on direction
+    if (global._key_throw) { // Fire when Space is held down
+        if (fire_timer <= 0) {
+            // Create the bullet depending on attack state
+            if (!in_attack_2) {
+                var bullet = instance_create_layer(x, y, "Instances", vork_object);
+                fire_rate = 60; // Default cooldown for vork_object
+            } else {
+                var bullet = instance_create_layer(x, y, "Instances", vork_2_object);
+                fire_rate = 40; // Shorter cooldown for vork_2_object
+            }
 
-	// Decrease the fire timer every step
-	if (fire_timer > 0) {
-	    fire_timer--;
-	}
+            // Set bullet speed based on last_direction
+            if (global.has_created_character) {
+                bullet.bullet_id = player_id;
+            }
+            bullet.speed = last_direction * 10;
+            bullet.bullet_direction = last_direction;
 
-	// Decrease cooldown timer
-	if (knockback_cooldown > 0) {
-	    knockback_cooldown -= 1;
-	}
+            // Reset fire timer
+            fire_timer = fire_rate;
+        }
+    }
 
-	if (is_knocked_back) {
-	    // Apply knockback to position
-	    x += knockback_x * knockback_multiplier;
-	    y += abs(knockback_y * knockback_multiplier) * -1;
+    // Toggle attack mode when the throw_2 button is pressed
+    if (global._key_throw_2 && !global._key_throw_2_prev) { // Check for a key press event
+        in_attack_2 = !in_attack_2; // Toggle the state of in_attack_2
+    }
+    global._key_throw_2_prev = global._key_throw_2; // Update the previous state
 
-	    // Gradually reduce knockback velocity in the x-direction
-	    knockback_x *= 0.9;
-		knockback_y *= 0.9;
+    // Decrease the fire timer every step
+    if (fire_timer > 0) {
+        fire_timer--;
+    }
 
-	    // Stop knockback entirely when both x and y velocities are small
-	    if (abs(knockback_x) < 0.1 && abs(knockback_y) < 0.1) {
-	        knockback_x = 0;
-	        knockback_y = 0;  // Reset knockback_y
-	        is_knocked_back = false;  // End knockback state
-	    }
-	}
+    // Decrease cooldown timer
+    if (knockback_cooldown > 0) {
+        knockback_cooldown -= 1;
+    }
+
+    if (is_knocked_back) {
+        // Apply knockback to position
+        x += knockback_x * knockback_multiplier;
+        y += abs(knockback_y * knockback_multiplier) * -1;
+
+        // Gradually reduce knockback velocity in the x-direction
+        knockback_x *= 0.9;
+        knockback_y *= 0.9;
+
+        // Stop knockback entirely when both x and y velocities are small
+        if (abs(knockback_x) < 0.1 && abs(knockback_y) < 0.1) {
+            knockback_x = 0;
+            knockback_y = 0;  // Reset knockback_y
+            is_knocked_back = false;  // End knockback state
+        }
+    }
 }
 
 function soviet_draw(){
