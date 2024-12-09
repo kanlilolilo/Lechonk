@@ -25,6 +25,7 @@ function shylily_stats(){
 	cool_down_rate = 0.5; // Rate at which the minigun cools down per step (when not firing)
 	image_xscale = 1;
 	image_yscale = 1;
+	sprite_index = shylily_idle_sprite;
 }
 
 function shylily_player(){

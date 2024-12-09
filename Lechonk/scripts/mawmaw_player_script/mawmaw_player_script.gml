@@ -29,6 +29,7 @@ function mawmaw_stats(){
 	max_knockback_multiplier = 5;
 	image_xscale = 0.2;
 	image_yscale = 0.2;
+	sprite_index = mawmaw_idle_sprite;
 }
 	
 function mawmaw_player(){

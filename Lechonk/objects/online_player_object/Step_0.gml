@@ -7,53 +7,68 @@
 	global._key_jump = global._input.up
 	global._key_down = global._input.down
 	global._key_throw = global._input.fire
-	global._key_throw2 = global._input.fire2
-	global._key_rightswitch = global._input.right
+	global._key_throw_2 = global._input.fire2
 
-	if (global._key_rightswitch && start_timer == false) {
-		key_pressed = 1
+// Handle right press
+if (global._key_left && global.start_timer == false) {
+    key_pressed = 1;
+}
+
+if (!global._key_left && key_pressed == 1) {
+	if (character != 1) {
+		character--;
+	} else {
+		character = 4
 	}
+	key_pressed = 0;
+	switch_character = true
+}
 
-	if (!global._key_rightswitch && key_pressed == 1) {
-		 switch (character) {
-		    case 4: // Mawmaw
-		        character--
-		        key_pressed = 0;
-				mawmaw_stats();
-		        break;
+// Handle left press
+if (global._key_right && global.start_timer == false) {
+    key_pressed2 = 1;
+}
 
-		    case 3: // Capy
-		        character--
-		        character_name = "capy";
-		        key_pressed = 0;
-
-				capy_stats();
-		        break;
-
-		    case 2: // Shylily
-		        character--
-		        character_name = "shylily";
-		        key_pressed = 0;
-
-		        shylily_stats();
-		        break;
-
-		    case 1: // Soviet
-		        character = 4; //total characters
-		        character_name = "soviet";
-		        key_pressed = 0;
-
-		        soviet_stats();
-		        break;
-
-		    default:
-		        // Handle invalid character cases if needed
-		        break;
-		}
-
+if (!global._key_right && key_pressed2 == 1) {
+	if (character != 4) {
+		character++;
+	} else {
+		character = 1
 	}
+	key_pressed2 = 0;
+	switch_character = true
+}
 
-	if (start_timer == true) {
+if (switch_character) {
+	switch_character = false
+	switch (character) {
+	    case 3: // Mawmaw
+	        mawmaw_stats();
+	        break;
+
+	    case 4: // Capy
+	        character_name = "capy";
+	        capy_stats();
+	        break;
+
+	    case 1: // Shylily
+	        character_name = "shylily";
+	        shylily_stats();
+	        break;
+
+	    case 2: // Soviet
+	        character_name = "soviet";
+	        soviet_stats();
+	        break;
+
+	    default:
+	        // Handle invalid character cases if needed
+	        break;
+	}
+}
+
+
+	if (global.start_timer == true) {
 		depth = 0
 		
 	if (y > room_height + 100) { 

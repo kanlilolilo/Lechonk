@@ -1,12 +1,15 @@
 character = 1;
 character_name = "shylily"
 key_pressed = 0;
+key_pressed2 = 0;
 depth = -10;
-start_timer = false
+global.start_timer = false
 alarm[0] = 300
 can_jump = true
 can_jump2 = true
 jump_timer = 0; // Timer to delay the double jump
+
+switch_character = false
 
 is_following = false;
 input_disabled = false;

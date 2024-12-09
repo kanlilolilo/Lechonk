@@ -28,6 +28,7 @@ function capy_stats(){
 	inactive_timer = 0;
 	image_xscale = 1;
 	image_yscale = 1;
+	sprite_index = capy_idle_sprite;
 }
 
 function capy_player(){

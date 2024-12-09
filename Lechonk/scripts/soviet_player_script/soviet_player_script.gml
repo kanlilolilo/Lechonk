@@ -3,6 +3,7 @@ function soviet_stats(){
 	
 	is_following = false;
 	input_disabled = false;
+	throw_2_pressed = 0;
 	
 	hsp = 0;
 	vsp = 0;
@@ -28,6 +29,7 @@ function soviet_stats(){
 
 	image_xscale = 0.2
 	image_yscale = 0.2
+	sprite_index = soviet_union_sprite
 }
 
 function soviet_player() {
@@ -78,10 +80,14 @@ function soviet_player() {
     }
 
     // Toggle attack mode when the throw_2 button is pressed
-    if (global._key_throw_2 && !global._key_throw_2_prev) { // Check for a key press event
+	if (global._key_throw_2) {
+		throw_2_pressed = 1
+	}
+	
+    if (!global._key_throw_2 && throw_2_pressed == 1) { // Check for a key press event
         in_attack_2 = !in_attack_2; // Toggle the state of in_attack_2
+		throw_2_pressed = 0
     }
-    global._key_throw_2_prev = global._key_throw_2; // Update the previous state
 
     // Decrease the fire timer every step
     if (fire_timer > 0) {
