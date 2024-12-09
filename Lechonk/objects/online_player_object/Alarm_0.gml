@@ -1,1 +1,1 @@
-global.start_timer = true
+start_timer = true

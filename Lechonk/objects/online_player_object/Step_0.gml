@@ -10,7 +10,7 @@
 	global._key_throw_2 = global._input.fire2
 
 // Handle right press
-if (global._key_left && global.start_timer == false) {
+if (global._key_left && start_timer == false) {
     key_pressed = 1;
 }
 
@@ -25,7 +25,7 @@ if (!global._key_left && key_pressed == 1) {
 }
 
 // Handle left press
-if (global._key_right && global.start_timer == false) {
+if (global._key_right && start_timer == false) {
     key_pressed2 = 1;
 }
 
@@ -68,7 +68,7 @@ if (switch_character) {
 }
 
 
-	if (global.start_timer == true) {
+	if (start_timer == true) {
 		depth = 0
 		
 	if (y > room_height + 100) { 

@@ -1,6 +1,7 @@
 // Get the base coordinates from capy_portrait_sprite
 var base_x = 1120
 var base_y = 160
+var player = online_player_object;
 
 // Adjust the x and y offsets based on the count
 switch (count) {
