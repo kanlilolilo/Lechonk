@@ -13,5 +13,5 @@ var _joined = rollback_join_game();
 
 if (!_joined)
 {
-    rollback_create_game(3, false);
+    rollback_create_game(2, false);
 }
