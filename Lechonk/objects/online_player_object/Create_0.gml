@@ -1,3 +1,4 @@
+map = true
 character = 1;
 character_name = "shylily"
 key_pressed = 0;
