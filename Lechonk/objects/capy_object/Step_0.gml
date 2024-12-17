@@ -19,17 +19,6 @@ global._key_throw_2 = keyboard_check(190);
 
 movement_collision();
 
-// Handle sprite flipping based on movement direction
-if (global._key_left) {
-	sprite_index = capy_walk_sprite;
-	image_xscale = -1; // Mirror sprite when moving left
-} else if (global._key_right) {
-	sprite_index = capy_walk_sprite;
-	image_xscale = 1; // Reset to original when moving right
-} else {
-	sprite_index = capy_idle_sprite;
-}
-
 capy_player();
 
 if (y > room_height + 100) { // If the player falls below the map

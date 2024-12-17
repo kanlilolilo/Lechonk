@@ -53,6 +53,17 @@ function capy_player(){
 	        dash_timer = 10;              // Dash duration
 	    }
 	}
+	
+	// Handle sprite flipping based on movement direction
+	if (global._key_left) {
+		sprite_index = capy_walk_sprite;
+		image_xscale = -1; // Mirror sprite when moving left
+	} else if (global._key_right) {
+		sprite_index = capy_walk_sprite;
+		image_xscale = 1; // Reset to original when moving right
+	} else {
+		sprite_index = capy_idle_sprite;
+	}
 
 	// Manage dash timing
 	if (dash_timer > 0) {
@@ -85,7 +96,7 @@ function capy_player(){
 	    sprite_index = capy_down_sprite;
 	} else if (vsp < 0) {
 	    sprite_index = capy_jump_sprite;
-	    image_index = -1;
+	    image_index = 0;
 	} else if (vsp > 0) {
 	    sprite_index = capy_jump_sprite;
 	    image_index = 1;
