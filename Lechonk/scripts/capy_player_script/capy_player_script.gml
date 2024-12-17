@@ -85,7 +85,7 @@ function capy_player(){
 	    sprite_index = capy_down_sprite;
 	} else if (vsp < 0) {
 	    sprite_index = capy_jump_sprite;
-	    image_index = 0;
+	    image_index = -1;
 	} else if (vsp > 0) {
 	    sprite_index = capy_jump_sprite;
 	    image_index = 1;

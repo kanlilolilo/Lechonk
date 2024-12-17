@@ -5,6 +5,7 @@ function game_end_online_sequence() {
     // Move the player to a new position (example: x = 100, y = 200)
     player.x = 2272;
     player.y = 256;
+	player.hsp = 0;
 
 	player.alarm[1] = 300
 	player.alarm[0] = 300
