@@ -1,7 +1,7 @@
 // Initialize bullet properties
 speed = 6;
 knockback_power = 10;
-knockback_multiplier_increase = 0.24;
+knockback_multiplier_increase = 0.16;
 
 // Set the bullet size (smaller size)
 image_xscale = 0.2;
