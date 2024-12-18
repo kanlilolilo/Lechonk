@@ -6,12 +6,21 @@ if(speed > 0) {
 	image_yscale = image_xscale;
 } 
 
-if (speed > 0) {
-	x = 20 + target.x
+if (global.has_created_character) {
+	if (speed > 0) {
+		x = 20 + target.x
+	} else {
+		x = -20 + target.x
+	}
+	y = target.y
 } else {
-	x = -20 + target.x
+	if (speed > 0) {
+		x = 20 + target.x
+	} else {
+		x = -20 + target.x
+	}
+	y = target.y
 }
-y = target.y
 
 // Destroy the bullet if it leaves the room
 if (x < 0 || x > room_width || y < 0 || y > room_height) {

@@ -44,12 +44,13 @@ function mawmaw_player(){
 	        // Set bullet speed and direction
 			if (global.has_created_character) {
 				bullet.bullet_id = player_id
+				bullet.target = id
+			} else {
+				bullet.target = mawmaw_idle_object; // Set in the creation logic
 			}
 	        bullet.speed = last_direction;
 	        bullet.bullet_direction = last_direction;
 			
-			bullet.target = mawmaw_idle_object; // Set in the creation logic
-
 
 	        // Reset fire timer
 	        fire_timer2 = fire_rate2;
