@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"res_button_object",
+  "%Name":"res_select_object_360",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"res_button_object",
+  "name":"res_select_object_360",
   "overriddenProperties":[],
   "parent":{
     "name":"settings",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"res_button",
-    "path":"sprites/res_button/res_button.yy",
+    "name":"res_select",
+    "path":"sprites/res_select/res_select.yy",
   },
   "spriteMaskId":null,
   "visible":true,

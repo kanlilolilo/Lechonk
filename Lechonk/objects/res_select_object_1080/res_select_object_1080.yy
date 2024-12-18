@@ -9,8 +9,8 @@
   "name":"res_select_object_1080",
   "overriddenProperties":[],
   "parent":{
-    "name":"resolution",
-    "path":"folders/Objects/screens/resolution.yy",
+    "name":"settings",
+    "path":"folders/Objects/screens/settings.yy",
   },
   "parentObjectId":null,
   "persistent":false,

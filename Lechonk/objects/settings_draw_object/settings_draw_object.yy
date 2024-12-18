@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"resolution_test_2_object_1",
+  "%Name":"settings_draw_object",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"resolution_test_2_object_1",
+  "name":"settings_draw_object",
   "overriddenProperties":[],
   "parent":{
-    "name":"screens",
-    "path":"folders/Objects/screens.yy",
+    "name":"settings",
+    "path":"folders/Objects/screens/settings.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"capy_walk_sprite",
-    "path":"sprites/capy_walk_sprite/capy_walk_sprite.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

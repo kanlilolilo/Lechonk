@@ -15,3 +15,4 @@ window_set_position((screen_width - new_width) / 2, (screen_height - new_height)
 
 with (res_select_object_1080) instance_destroy();
 with (res_select_object_720) instance_destroy();
+with (res_select_object_360) instance_destroy();
