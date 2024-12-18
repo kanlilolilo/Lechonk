@@ -20,7 +20,7 @@ function mawmaw_stats(){
 	walksp = 3.2;
 	fire_rate = 60;
 	fire_timer = 0;
-	fire_rate2 = 30;
+	fire_rate2 = 60;
 	fire_timer2 = 0;
 	last_direction = 1;
 	knockback_x = 0;
@@ -36,7 +36,7 @@ function mawmaw_stats(){
 	
 function mawmaw_player(){
 	
-	if (global._key_throw_2) {
+	if (global._key_throw_2 && !mawmaw_full && !mawmaw_attacking) {
 	    if (fire_timer2 <= 0) {
 	        // Create a projectile
 	        var bullet = instance_create_layer(x, y, "Instances", mawmaw_slash_object);
@@ -45,11 +45,10 @@ function mawmaw_player(){
 			if (global.has_created_character) {
 				bullet.bullet_id = player_id
 			}
+			bullet.target = id
 	        bullet.speed = last_direction;
 	        bullet.bullet_direction = last_direction;
 			
-			bullet.target = mawmaw_idle_object; // Set in the creation logic
-
 
 	        // Reset fire timer
 	        fire_timer2 = fire_rate2;
@@ -94,7 +93,7 @@ function mawmaw_player(){
 	if (global._key_throw && attack_cooldown <= 0 && !mawmaw_attacking) {
 		mawmaw_attacking = true;          // Start attacking
 		attack_duration = 180;           // 3 seconds at 60 FPS
-		attack_cooldown = 300;           // Cooldown of 5 seconds after the attack
+		attack_cooldown = 600;           // Cooldown of 5 seconds after the attack
 	}
 
 	if (mawmaw_attacking) {

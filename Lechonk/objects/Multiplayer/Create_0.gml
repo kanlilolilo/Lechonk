@@ -13,5 +13,14 @@ var _joined = rollback_join_game();
 
 if (!_joined)
 {
-    rollback_create_game(2, false);
+    rollback_create_game(2, true);
 }
+
+// Create the left button
+global.Left = virtual_key_add(32, 400, 96, 464, vk_left);
+
+// Create the right button
+global.Right = virtual_key_add(128, 400, 192, 464, vk_right);
+
+// Create the jump button
+global.Jump = virtual_key_add(640, 400, 704, 464, vk_space);
