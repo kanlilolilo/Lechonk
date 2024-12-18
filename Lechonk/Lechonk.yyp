@@ -41,7 +41,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"Lechonk",
   "resources":[
@@ -66,6 +66,7 @@
     {"id":{"name":"logo_2_object","path":"objects/logo_2_object/logo_2_object.yy",},},
     {"id":{"name":"mawmaw_idle_object","path":"objects/mawmaw_idle_object/mawmaw_idle_object.yy",},},
     {"id":{"name":"mawmaw_portrait_object","path":"objects/mawmaw_portrait_object/mawmaw_portrait_object.yy",},},
+    {"id":{"name":"mawmaw_slash_object","path":"objects/mawmaw_slash_object/mawmaw_slash_object.yy",},},
     {"id":{"name":"melee_hitbox_object","path":"objects/melee_hitbox_object/melee_hitbox_object.yy",},},
     {"id":{"name":"multiplayer_gamemode_select_1","path":"objects/multiplayer_gamemode_select_1/multiplayer_gamemode_select_1.yy",},},
     {"id":{"name":"multiplayer","path":"objects/multiplayer/multiplayer.yy",},},
@@ -146,6 +147,7 @@
     {"id":{"name":"mawmaw_attack_sprite","path":"sprites/mawmaw_attack_sprite/mawmaw_attack_sprite.yy",},},
     {"id":{"name":"mawmaw_idle_sprite","path":"sprites/mawmaw_idle_sprite/mawmaw_idle_sprite.yy",},},
     {"id":{"name":"mawmaw_portrait_sprite","path":"sprites/mawmaw_portrait_sprite/mawmaw_portrait_sprite.yy",},},
+    {"id":{"name":"mawmaw_slash_sprite","path":"sprites/mawmaw_slash_sprite/mawmaw_slash_sprite.yy",},},
     {"id":{"name":"mawmaw_spin_sprite","path":"sprites/mawmaw_spin_sprite/mawmaw_spin_sprite.yy",},},
     {"id":{"name":"mawmaw_walk_sprite","path":"sprites/mawmaw_walk_sprite/mawmaw_walk_sprite.yy",},},
     {"id":{"name":"new_map_icon_sprite","path":"sprites/new_map_icon_sprite/new_map_icon_sprite.yy",},},

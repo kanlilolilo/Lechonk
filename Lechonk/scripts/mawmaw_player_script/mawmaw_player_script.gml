@@ -20,6 +20,8 @@ function mawmaw_stats(){
 	walksp = 3.2;
 	fire_rate = 60;
 	fire_timer = 0;
+	fire_rate2 = 30;
+	fire_timer2 = 0;
 	last_direction = 1;
 	knockback_x = 0;
 	knockback_y = 0;
@@ -33,6 +35,31 @@ function mawmaw_stats(){
 }
 	
 function mawmaw_player(){
+	
+	if (global._key_throw_2) {
+	    if (fire_timer2 <= 0) {
+	        // Create a projectile
+	        var bullet = instance_create_layer(x, y, "Instances", mawmaw_slash_object);
+
+	        // Set bullet speed and direction
+			if (global.has_created_character) {
+				bullet.bullet_id = player_id
+			}
+	        bullet.speed = last_direction;
+	        bullet.bullet_direction = last_direction;
+			
+			bullet.target = mawmaw_idle_object; // Set in the creation logic
+
+
+	        // Reset fire timer
+	        fire_timer2 = fire_rate2;
+	    }
+	} 
+	
+	if (fire_timer2 > 0) {
+		fire_timer2 -= 1;            // Decrease cooldown timer
+	}
+	
 	// Change sprite to walking sprite when moving, or idle when not{
 	if (global._key_left || global._key_right) {
 		sprite_index = mawmaw_walk_sprite;

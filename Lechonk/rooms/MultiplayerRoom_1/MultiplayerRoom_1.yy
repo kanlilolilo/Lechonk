@@ -137,6 +137,7 @@
     {"name":"inst_7E518A4","path":"rooms/MultiplayerRoom_1/MultiplayerRoom_1.yy",},
     {"name":"inst_1F20CA22","path":"rooms/MultiplayerRoom_1/MultiplayerRoom_1.yy",},
     {"name":"inst_5641495","path":"rooms/MultiplayerRoom_1/MultiplayerRoom_1.yy",},
+    {"name":"inst_4D314DDF","path":"rooms/MultiplayerRoom_1/MultiplayerRoom_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -297,6 +298,7 @@
         {"$GMRInstance":"v1","%Name":"inst_1E4C4D04_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1E4C4D04_1","objectId":{"name":"multiplayer","path":"objects/multiplayer/multiplayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2464.0,"y":160.0,},
         {"$GMRInstance":"v1","%Name":"inst_35E18C6D_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_35E18C6D_1","objectId":{"name":"camera_switch","path":"objects/camera_switch/camera_switch.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2432.0,"y":160.0,},
         {"$GMRInstance":"v1","%Name":"inst_77512154_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_77512154_1","objectId":{"name":"character_select_test","path":"objects/character_select_test/character_select_test.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1280.0,"y":288.0,},
+        {"$GMRInstance":"v1","%Name":"inst_4D314DDF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4D314DDF","objectId":{"name":"collision_object","path":"objects/collision_object/collision_object.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":17.0,"x":3008.0,"y":0.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_2","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_54A2FDEC_1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_54A2FDEC_1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"capy_portrait_sprite","path":"sprites/capy_portrait_sprite/capy_portrait_sprite.yy",},"x":1664.0,"y":224.0,},
