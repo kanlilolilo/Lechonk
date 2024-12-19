@@ -50,6 +50,7 @@
     {"id":{"name":"back_button_object","path":"objects/back_button_object/back_button_object.yy",},},
     {"id":{"name":"background_video_object","path":"objects/background_video_object/background_video_object.yy",},},
     {"id":{"name":"blank_portrait_object","path":"objects/blank_portrait_object/blank_portrait_object.yy",},},
+    {"id":{"name":"camera_object","path":"objects/camera_object/camera_object.yy",},},
     {"id":{"name":"camera_switch","path":"objects/camera_switch/camera_switch.yy",},},
     {"id":{"name":"capy_object","path":"objects/capy_object/capy_object.yy",},},
     {"id":{"name":"capy_portrait_object","path":"objects/capy_portrait_object/capy_portrait_object.yy",},},
