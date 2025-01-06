@@ -30,7 +30,7 @@ var box_width = max_x - min_x;
 var box_height = max_y - min_y;
 
 // Add some padding
-var padding = 200; // Adjust padding as needed
+var padding = 240; // Adjust padding as needed
 box_width += padding * 2;
 box_height += padding * 2;
 
@@ -73,7 +73,7 @@ var target_camera_x = clamp(target_center_x - target_view_width / 2, 0, room_wid
 var target_camera_y = clamp(target_center_y - target_view_height / 2, 0, room_height - target_view_height);
 
 // Smoothly interpolate current camera position and size towards the target
-var smooth_factor = 0.015; // Adjust for more or less smoothing (lower = smoother)
+var smooth_factor = 0.03; // Adjust for more or less smoothing (lower = smoother)
 var camera_x = lerp(camera_get_view_x(camera), target_camera_x, smooth_factor);
 var camera_y = lerp(camera_get_view_y(camera), target_camera_y, smooth_factor);
 var view_width = lerp(camera_get_view_width(camera), target_view_width, smooth_factor);
